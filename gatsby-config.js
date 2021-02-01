@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Blog of Ahmet Ömer`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Ahmet Ömer`,
+      summary: `Mauris vitae ipsum maximus libero scelerisque tincidunt. Donec mattis dolor eget orci ultrices, non congue leo volutpat. Etiam id leo eu sapien commodo rutrum.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    description: `Suspendisse interdum eleifend nibh a condimentum. Maecenas ut elit in mi cursus mattis et et elit.`,
+    siteUrl: `https://ahmetomerv.github.io`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `eswordert`,
     },
   },
   plugins: [
@@ -60,8 +60,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Blog of Ahmet Ömer`,
+        short_name: `Ahmet Ömer`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
