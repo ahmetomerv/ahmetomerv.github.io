@@ -3,7 +3,7 @@ title: Host Gatsby site on GitHub Pages with custom domains
 date: "2021-02-03T12:19:03.284Z"
 ---
 
-Now, there are many posts and informations about the topic but for my case, I had to stick pieces together from many places to get this simple site up. For starters, I'm assuming you've already purchased a domain name and have a GitHub account. If not, it's fairly easy to set up an account and buy a domain.
+Now, there are many posts and informations about the topic but for my case, I had to stick pieces together from many places to get this simple site up. For starters, I'm assuming you've already purchased a domain name, have a GitHub account and Node installed. If not, it's fairly easy to do all that following official docs. And for the domain, of course, you need money.
 
 _Note:_ This post isn't Gatsby-specific except for few details and is applicable to basically any static site to be hosted with custom domains on GitHub Pages. And for this case I'm using GoDaddy, but the main points hold the same for other providers as well.
 
@@ -20,10 +20,10 @@ $ npm install -g gatsby-cli
 You can either initialize a new project by running `npm init gatsby` or clone a ready to use blog starter, which I did, by running:
 
 ```markdown
-$ git clone https://github.com/gatsbyjs/gatsby.git
+$ git clone https://github.com/gatsbyjs/gatsby-starter-blog.git
 ```
 
-Once things are finished downloading, you can run `npm run develop` to serve the site locally and see how everything looks like.
+Once things are finished downloading, you can run `gatsby develop` to serve the site locally and see how everything looks like.
 
 ### 2 - Deploy to GitHub Pages
 
