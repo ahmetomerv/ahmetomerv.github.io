@@ -27,6 +27,9 @@ const Bio = () => {
           }
           social {
             twitter
+            dribbble
+            behance
+            github
           }
         }
       }
@@ -46,19 +49,30 @@ const Bio = () => {
           fixed={avatar}
           alt={author?.name || ``}
           className="bio-avatar"
-          imgStyle={{
-            borderRadius: `50%`,
-          }}
         />
       )}
       {author?.name && (
-        <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
-          {` `}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            You should follow them on Twitter
-          </a>
-        </p>
+        <React.Fragment>
+          <div>
+            {author?.summary || null}
+            <br/>
+            <a className="bio-link" href={`${social?.twitter || ``}`}>
+              Twitter
+            </a>
+            <span> / </span>
+            <a className="bio-link" href={`${social?.github || ``}`}>
+              GitHub
+            </a>
+            <span> / </span>
+            <a className="bio-link" href={`${social?.dribbble || ``}`}>
+              Dribbble
+            </a>
+            <span> / </span>
+            <a className="bio-link" href={`${social?.behance || ``}`}>
+              Behance
+            </a>
+          </div>
+        </React.Fragment>
       )}
     </div>
   )

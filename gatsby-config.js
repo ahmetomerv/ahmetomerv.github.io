@@ -1,14 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: `Blog of Ahmet Ömer`,
+    title: `Ahmet Ömer`,
     author: {
       name: `Ahmet Ömer`,
-      summary: `Mauris vitae ipsum maximus libero scelerisque tincidunt. Donec mattis dolor eget orci ultrices, non congue leo volutpat. Etiam id leo eu sapien commodo rutrum.`,
+      summary: `Random thoughts and writings. Take everything with a grain of salt.`,
     },
-    description: `Suspendisse interdum eleifend nibh a condimentum. Maecenas ut elit in mi cursus mattis et et elit.`,
-    siteUrl: `https://ahmetomerv.github.io`,
+    siteUrl: `https://ahmetomer.net`,
     social: {
-      twitter: `eswordert`,
+      twitter: 'https://twitter.com/eswordert',
+      github: 'https://github.com/ahmetomerv',
+      dribbble: 'https://dribbble.com/ahmetomer',
+      behance: 'https://behance.net/ahmetomerv',
     },
   },
   plugins: [
@@ -60,7 +62,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Blog of Ahmet Ömer`,
+        name: `Ahmet Ömer`,
         short_name: `Ahmet Ömer`,
         start_url: `/`,
         background_color: `#ffffff`,
