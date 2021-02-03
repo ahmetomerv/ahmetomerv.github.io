@@ -1,5 +1,6 @@
-import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import { Link, useStaticQuery, graphql } from 'gatsby';
+import Helmet from 'react-helmet';
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
