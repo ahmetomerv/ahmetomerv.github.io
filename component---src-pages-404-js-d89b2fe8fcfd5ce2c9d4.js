@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{w2l6:function(t,e,a){"use strict";a.r(e),a.d(e,"pageQuery",(function(){return r}));var n=a("q1tI"),l=a.n(n),o=a("Bl7J"),i=a("vrFN");e.default=function(t){var e=t.data,a=t.location,n=e.site.siteMetadata.title;return l.a.createElement(o.a,{location:a,title:n},l.a.createElement(i.a,{title:"404: Not Found"}),l.a.createElement("h1",null,"404: Not Found"),l.a.createElement("p",null,"This place doesn't exist..."))};var r="3159585216"}}]);
+//# sourceMappingURL=component---src-pages-404-js-d89b2fe8fcfd5ce2c9d4.js.map
