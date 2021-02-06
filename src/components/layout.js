@@ -36,16 +36,16 @@ const Layout = ({ location, title, children }) => {
   
         { social && (
           <React.Fragment>
-            <a className="post-page-nav-item bio-link" target="_blank" href={`${social?.twitter || ``}`}>
+            <a className="post-page-nav-item bio-link" target="_blank" rel="noreferrer" href={`${social?.twitter || ``}`}>
               Twitter
             </a>
-            <a className="post-page-nav-item bio-link" target="_blank" href={`${social?.github || ``}`}>
+            <a className="post-page-nav-item bio-link" target="_blank" rel="noreferrer" href={`${social?.github || ``}`}>
               GitHub
             </a>
-            <a className="post-page-nav-item bio-link" target="_blank" href={`${social?.dribbble || ``}`}>
+            <a className="post-page-nav-item bio-link" target="_blank" rel="noreferrer" href={`${social?.dribbble || ``}`}>
               Dribbble
             </a>
-            <a className="post-page-nav-item bio-link" target="_blank" href={`${social?.behance || ``}`}>
+            <a className="post-page-nav-item bio-link" target="_blank" rel="noreferrer" href={`${social?.behance || ``}`}>
               Behance
             </a>
           </React.Fragment>
