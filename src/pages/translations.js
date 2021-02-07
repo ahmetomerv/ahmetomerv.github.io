@@ -5,7 +5,7 @@ import Bio from '../components/bio';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const Youtube = ({ data, location }) => {
+const Translations = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
 
   return (
@@ -40,7 +40,7 @@ const Youtube = ({ data, location }) => {
   )
 }
 
-export default Youtube;
+export default Translations;
 
 export const pageQuery = graphql`
   query {
