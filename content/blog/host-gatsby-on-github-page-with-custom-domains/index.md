@@ -49,7 +49,7 @@ Or, you can just run it directly:
 $ gatsby build && gh-pages -d public -b gh-pages
 ```
 
-The commands above basically build the Gatsby site (which is also a React app) with all of its contents, and then using the `gh-pages` package, it deploys the `public` folder, which includes the static files, to the associated GitHub repo. The parameter after `-b` is the name of the branch used to push the static files to. You can name it however you like.
+The commands above basically build the Gatsby site (which is also a React app) with all of its contents, and then using the `gh-pages` package, it deploys the `public` folder, which includes the static files, to the associated GitHub repo. The value after parameter `-b` is the name of the branch used to push the static files to. You can name it however you like.
 
 ### 3 - Connect custom domain
 
