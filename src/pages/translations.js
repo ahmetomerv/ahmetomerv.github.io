@@ -11,7 +11,6 @@ const Translations = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Translations" />
-      <Bio />
 
       <div>
         <h3>Translation Works</h3>
