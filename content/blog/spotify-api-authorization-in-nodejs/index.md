@@ -156,7 +156,7 @@ Now, to test what we have, we need to run a client at port `3000`. I'm going wit
 _Note:_ Whether you run the client app seperately, or choose to serve from the same Node app, make sure to change the `REDIRECTURI` variable accordingly.
 
 #### Login
-In your client, simple make a GET call to `http://localhost:8888/api/login` either with a link, or a button. You'll be redirected to Spotify login screen:
+In your client, simply make a GET call to `http://localhost:8888/api/login` either with a link, or a button. You'll be redirected to Spotify login screen:
 
 ![Spotify login screen](./spotify-login.png "Spotify login screen")
 
