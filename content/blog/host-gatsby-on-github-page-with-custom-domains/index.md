@@ -1,6 +1,7 @@
 ---
 title: Host Gatsby site on GitHub Pages with custom domains
 date: "2021-02-03T12:19:03.284Z"
+description: Hosting static sites on GitHub pages with DNS settings for custom domains. 
 ---
 
 Now, there are many posts and informations about the topic but for my case, I had to stick pieces together from many places to get this simple site up. For starters, I'm assuming you've already purchased a domain name, have a GitHub account and Node installed. If not, it's fairly easy to do all that following official docs. And for the domain, of course, you need money.
@@ -9,7 +10,7 @@ _Note:_ This post isn't Gatsby-specific except for few details and is applicable
 
 ---
 
-### 1 - Setting up Gatsby
+### Setting up Gatsby
 
 To set up a Gatsby project, you first need to install it's CLI tool by running:
 
@@ -25,7 +26,7 @@ $ git clone https://github.com/gatsbyjs/gatsby-starter-blog.git
 
 Once things are finished downloading, you can run `gatsby develop` to serve the site locally and see how everything looks like.
 
-### 2 - Deploy to GitHub Pages
+### Deploy to GitHub Pages
 
 First of all, you need to install the `gh-pages` package by running the following:
 
@@ -37,7 +38,7 @@ Then, create a repo on your GitHub account with the name `<username>.github.io`.
 
 Next thing to do is build the site and make it ready for the deployment, run `npm run deploy`.
 
-_NOTE:_ If you didn't clone the starter project, you may not have the `deploy` script in your `package.json` file. You can use the deploy script by adding the following line to the scripts object:
+_Note:_ If you didn't clone the starter project, you may not have the `deploy` script in your `package.json` file. You can use the deploy script by adding the following line to the scripts object:
 
 ```markdown
 "deploy": "gatsby build && gh-pages -d public -b gh-pages"
@@ -51,13 +52,13 @@ $ gatsby build && gh-pages -d public -b gh-pages
 
 The commands above basically build the Gatsby site (which is also a React app) with all of its contents, and then using the `gh-pages` package, it deploys the `public` folder, which includes the static files, to the associated GitHub repo. The value after parameter `-b` is the name of the branch used to push the static files to. You can name it however you like.
 
-### 3 - Connect custom domain
+### Connect custom domain
 
 ![GitHub Pages settings](./github-pages.png)
 
 Go to your repo's settings page and scroll down to GitHub Pages section. In the source branch option, you should see the branch name of which you pushed the static files to earlier. If not, you can select that branch.
 
-_NOTE:_ When you publish to GitHub pages using `gh-pages` or change the source branch, it might take a few minutes to go live. Be patient.
+_Note:_ When you publish to GitHub pages using `gh-pages` or change the source branch, it might take a few minutes to go live. Be patient.
 
 If everything went okay, you should see the message "Your site is published at xxx.github.io" (ignore the custom domain in the screenshot, we'll get to it later).
 

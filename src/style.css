@@ -313,10 +313,6 @@ a:focus {
   color: #4a4a4a;
 }
 
-.post-list-item header {
-  margin-bottom: var(--spacing-2);
-}
-
 .post-header {
   font-family: sans-serif;
   font-size: 2.1em;

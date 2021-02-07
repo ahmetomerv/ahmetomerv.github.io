@@ -1,6 +1,7 @@
 ---
 title: Spotify API Authorization in Node.js
 date: "2021-02-07T18:14:03.284Z"
+description: Creating a Node.js application that interacts with the Spotify API with examples.
 ---
 
 Spotify has many options that allow applications on most platforms to interact with their services. It has SDKs for iOS and Android. For the web, there are unofficial libraries that are developed by the community. You can see the full list [here](https://developer.spotify.com/documentation/web-api/libraries/).
