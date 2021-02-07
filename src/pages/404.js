@@ -5,7 +5,7 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 
 const NotFoundPage = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
+  const siteTitle = data.site.siteMetadata.title;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -16,7 +16,7 @@ const NotFoundPage = ({ data, location }) => {
   )
 }
 
-export default NotFoundPage
+export default NotFoundPage;
 
 export const pageQuery = graphql`
   query {
@@ -26,4 +26,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

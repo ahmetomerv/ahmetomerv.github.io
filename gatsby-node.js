@@ -28,7 +28,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   if (result.errors) {
     reporter.panicOnBuild(
-      `There was an error loading your blog posts`,
+      `There was an error loading blog posts`,
       result.errors
     )
     return
@@ -42,8 +42,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   if (posts.length > 0) {
     posts.forEach((post, index) => {
-      const previousPostId = index === 0 ? null : posts[index - 1].id
-      const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
+      const previousPostId = index === 0 ? null : posts[index - 1].id;
+      const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id;
 
       createPage({
         path: post.fields.slug,
@@ -62,18 +62,18 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    const value = createFilePath({ node, getNode });
 
     createNodeField({
       name: `slug`,
       node,
       value,
-    })
+    });
   }
 }
 
 exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions
+  const { createTypes } = actions;
 
   // Explicitly define the siteMetadata {} object
   // This way those will always be defined even if removed from gatsby-config.js
@@ -111,5 +111,5 @@ exports.createSchemaCustomization = ({ actions }) => {
     type Fields {
       slug: String
     }
-  `)
+  `);
 }

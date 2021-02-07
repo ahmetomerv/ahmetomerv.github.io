@@ -373,6 +373,16 @@ a:focus {
   text-decoration: underline;
 }
 
+.main-link {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.main-link:hover {
+  color: var(--color-primary-light);
+  text-decoration: underline;
+}
+
 .bio {
   display: flex;
   font-family: sans-serif;

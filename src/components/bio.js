@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
 const Bio = () => {
@@ -37,9 +37,9 @@ const Bio = () => {
   `)
 
   // Set these values by editing "siteMetadata" in gatsby-config.js
-  const author = data.site.siteMetadata?.author
-  const social = data.site.siteMetadata?.social
-  const avatar = data?.avatar?.childImageSharp?.fixed
+  const author = data.site.siteMetadata?.author;
+  const social = data.site.siteMetadata?.social;
+  const avatar = data?.avatar?.childImageSharp?.fixed;
 
   return (
     <div className="bio">
@@ -63,6 +63,10 @@ const Bio = () => {
               GitHub
             </a>
             <span> / </span>
+            <Link className="post-page-nav-item bio-link" to="/translations">
+              Translations
+            </Link>
+            <span> / </span>
             <a className="bio-link" target="_blank" rel="noreferrer" href={`${social?.dribbble || ``}`}>
               Dribbble
             </a>
@@ -77,4 +81,4 @@ const Bio = () => {
   )
 }
 
-export default Bio
+export default Bio;

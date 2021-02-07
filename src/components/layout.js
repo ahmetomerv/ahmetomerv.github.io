@@ -42,6 +42,9 @@ const Layout = ({ location, title, children }) => {
             <a className="post-page-nav-item bio-link" target="_blank" rel="noreferrer" href={`${social?.github || ``}`}>
               GitHub
             </a>
+            <Link className="post-page-nav-item bio-link" to="/translations">
+              Translations
+            </Link>
             <a className="post-page-nav-item bio-link" target="_blank" rel="noreferrer" href={`${social?.dribbble || ``}`}>
               Dribbble
             </a>
