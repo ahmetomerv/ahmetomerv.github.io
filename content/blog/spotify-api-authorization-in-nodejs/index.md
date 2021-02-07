@@ -91,7 +91,7 @@ const querystring = require('querystring');
 module.exports = router;
 ```
 
-Then, add the `/login` route:
+Then, add the `/api/login` route:
 
 ```javascript
 router.get('/login', async (req, res) => {
@@ -116,11 +116,11 @@ router.get('/login', async (req, res) => {
 });
 ```
 
-This route will accept get requests, authorize a user and redirect to our endpoint defined in `REDIRECTURI`, which is `/api/logged`.
+This route will accept get requests at `/api/login`, authorize a user and redirect to our endpoint defined in `REDIRECTURI`, which is `/api/logged`.
 
 The `scope` variable holds the permissions we need for our app. This also allows the users to know which data they'd be sharing with your app. You can see the full list [here](https://developer.spotify.com/documentation/general/guides/scopes).
 
-Next, we create the `/logged` route:
+Next, we create the `/api/logged` route:
 
 ```javascript
 router.get('/logged', async (req, res) => {
@@ -152,7 +152,7 @@ When a user is authorized, Spotify will redirect to this route with a code that 
 
 ### The Frontend
 
-Now, to test what we have, we need to run a client at port `3000`. I'm going with a React app seperately from our Node server, but it doesn't matter how you go on about your client as long as your `api/logged` route redirects to where your app runs.
+Now, to test what we have, we need to run a client at port `3000`. I'm going with a React app seperately from our Node server, but it doesn't matter how you go on about your client as long as your `/api/logged` route redirects to where your app runs.
 
 _Note:_ Whether you run the client app seperately, or choose to serve from the same Node app, make sure to change the `REDIRECTURI` variable accordingly.
 
