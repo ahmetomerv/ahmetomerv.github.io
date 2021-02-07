@@ -1,4 +1,320 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Ahmet Ömer]]></title><description><![CDATA[Ahmet Ömer]]></description><link>https://ahmetomer.net</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 07 Feb 2021 08:48:56 GMT</lastBuildDate><item><title><![CDATA[Host Gatsby site on GitHub Pages with custom domains]]></title><description><![CDATA[Now, there are many posts and informations about the topic but for my case, I had to stick pieces together from many places to get this…]]></description><link>https://ahmetomer.net/host-gatsby-on-github-page-with-custom-domains/</link><guid isPermaLink="false">https://ahmetomer.net/host-gatsby-on-github-page-with-custom-domains/</guid><pubDate>Wed, 03 Feb 2021 12:19:03 GMT</pubDate><content:encoded>&lt;p&gt;Now, there are many posts and informations about the topic but for my case, I had to stick pieces together from many places to get this simple site up. For starters, I’m assuming you’ve already purchased a domain name, have a GitHub account and Node installed. If not, it’s fairly easy to do all that following official docs. And for the domain, of course, you need money.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Ahmet Ömer]]></title><description><![CDATA[Ahmet Ömer]]></description><link>https://ahmetomer.net</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 07 Feb 2021 15:38:25 GMT</lastBuildDate><item><title><![CDATA[Spotify API Authorization in Node.js]]></title><description><![CDATA[Spotify has many options that allow applications on most platforms to interact with their services. It has SDKs for iOS and Android. For the…]]></description><link>https://ahmetomer.net/spotify-api-authorization-in-nodejs/</link><guid isPermaLink="false">https://ahmetomer.net/spotify-api-authorization-in-nodejs/</guid><pubDate>Sat, 06 Feb 2021 18:14:03 GMT</pubDate><content:encoded>&lt;p&gt;Spotify has many options that allow applications on most platforms to interact with their services. It has SDKs for iOS and Android. For the web, there are unofficial libraries that are developed by the community. You can see the full list &lt;a href=&quot;https://developer.spotify.com/documentation/web-api/libraries/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&quot;https://github.com/thelinmichael/spotify-web-api-node&quot;&gt;Spotify Node API Wrapper&lt;/a&gt; by &lt;a href=&quot;https://github.com/thelinmichael&quot;&gt;Michael Thelin&lt;/a&gt; (Michael seems to be working at Spotify, but the library is not owned by the company) is a good library to choose. But it is not necessary or required to use an external library. You may as well interact with their services directly.&lt;/p&gt;
+&lt;p&gt;This article will go over on how to authorize Spotify users and a few examples on retrieving user data. In addition to Node, &lt;a href=&quot;https://expressjs.com&quot;&gt;Express&lt;/a&gt; will be used for routing and &lt;a href=&quot;https://github.com/motdotla/dotenv&quot;&gt;dotenv&lt;/a&gt; for environment variable management.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;Register an app and get a token&lt;/h3&gt;
+&lt;p&gt;First of all, we need to create an app on Spotify Developer Dashboard which will give us a token that we can use in our Node app.&lt;/p&gt;
+&lt;p&gt;Go to &lt;a href=&quot;https://developer.spotify.com/dashboard/applications&quot;&gt;Spotify Dashboard&lt;/a&gt;, login with your account, and click Create An App. Fill out the fields. You can change the name and description info later too.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a65a1d8959a23c2ae6243fd7770cc405/bf286/spotify-secret.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 77.21518987341771%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAACF0lEQVQ4y41T227aQBA1CEFs7LV3fcUGwtWRaCMhpMADEPGCUkQQD3xDm8+o8llEvNL2r049k5ISREQejmd213v2zJldbbPZoN/vI01T+L6PMAwRBAHy+TxyuRwcx0GpVIKmabAsi6Ou67Btm3NaU0q9/aN1u10mkFLCNM03XF1dMSjXdYM3lMtljoZh8Pwhp4MoMimd5rouoihCpVJBHMcMmqNDSAmBlB5HIcS7/LCmUUKSqVTP85g0SRIUi0UUCgU+/bDpM9DoM5lMMB6PMZ/PGcPhEKvVCovFgu04Jr1EzoSj0QjT6RTr9ZqJBoMBZrMZH0KNYkJhvyP9CFwyqSDfqGQymzpMHaMuk9FEKLL/rBOFHxK2Wi32jq7O4/KRS10ulxy/PTxgen+PJPNYWYKJLypsNBtwPRffn37g15/f2L68YLfbYbvdYr/f4+fzM6qOZFwkJOlWJBkiVrDrHoTKyjMtLpVANhh0Pz/TZWKl+yaV5HtE4PEJ1Jm5c2CFvV6Pr8rd8A5fb29Brye9uUE37TLI21N0zsx30k5GaAtEYZSZHiMKItSDKqv1XQ+JF6PmJVnuQ7mKX88B1Wyeovo3pj3Xfu1VYeiFiJwg66JEWzagWwakkGg4NXRlE65QMC2TPSJPHeHwf4cxRSPb80WlrwpJTSRD+I6Hpqpn5luQtkRLXfOY5i3x/7XQWjtbO+4u8aSqjb8oJoJyzh/HnAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Spotify app secret&quot;
+        title=&quot;Spotify app secret&quot;
+        src=&quot;/static/a65a1d8959a23c2ae6243fd7770cc405/f058b/spotify-secret.png&quot;
+        srcset=&quot;/static/a65a1d8959a23c2ae6243fd7770cc405/c26ae/spotify-secret.png 158w,
+/static/a65a1d8959a23c2ae6243fd7770cc405/6bdcf/spotify-secret.png 315w,
+/static/a65a1d8959a23c2ae6243fd7770cc405/f058b/spotify-secret.png 630w,
+/static/a65a1d8959a23c2ae6243fd7770cc405/40601/spotify-secret.png 945w,
+/static/a65a1d8959a23c2ae6243fd7770cc405/78612/spotify-secret.png 1260w,
+/static/a65a1d8959a23c2ae6243fd7770cc405/bf286/spotify-secret.png 1688w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Once it’s created, click Show Client Secret and copy the token. This piece of string should be kept secret, hence the name, and never be published to a source control. There are crawlers on the internet searching for such tokens. Be cautious.&lt;/p&gt;
+&lt;h3&gt;Create a Node app&lt;/h3&gt;
+&lt;p&gt;Next, we create a Node app. You can run &lt;code class=&quot;language-text&quot;&gt;npm init&lt;/code&gt; to start a new project then run the following command to install the necessary dependencies:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ssh&quot;&gt;&lt;pre class=&quot;language-ssh&quot;&gt;&lt;code class=&quot;language-ssh&quot;&gt;$ npm install express dotenv cors node-fetch querystring&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;node-fetch&lt;/code&gt; is the equivalent of &lt;code class=&quot;language-text&quot;&gt;fetch&lt;/code&gt; on native browsers, but for Node. &lt;code class=&quot;language-text&quot;&gt;querystring&lt;/code&gt; is a module for parsing and formatting URLs. We’ll use this to stringify objects when making HTTP calls to Spotify services.&lt;/p&gt;
+&lt;p&gt;In the &lt;code class=&quot;language-text&quot;&gt;index.js&lt;/code&gt; file (or whatever you named for your main entry), use the following code:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; express &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;express&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; cors &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;cors&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;dotenv&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;PORT&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; process&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;PORT&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8888&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; application &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+application&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;express&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+application&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;express&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;urlencoded&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; extended&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+application&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;cors&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; AuthRoutes &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;./routes/authRoutes.js&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+application&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;/api&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;cors&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; AuthRoutes&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+application&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;PORT&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;Server started on port &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;PORT&lt;/span&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This basically bootstraps a Node app with Express, cors and dotenv, and defines a route module, which we’ll use to interact with Spotify. You can prefix the route however you like.&lt;/p&gt;
+&lt;h3&gt;Set up Environment Variables&lt;/h3&gt;
+&lt;p&gt;Using &lt;code class=&quot;language-text&quot;&gt;dotenv&lt;/code&gt; we can seperate and load our environment-specific configuration variables into &lt;code class=&quot;language-text&quot;&gt;process.env&lt;/code&gt;, which will be available throughout the application, without having to expose or hardcode them.&lt;/p&gt;
+&lt;p&gt;Create a file named &lt;code class=&quot;language-text&quot;&gt;.env&lt;/code&gt; in the root of your project and add the following variables replacing &lt;code class=&quot;language-text&quot;&gt;CLIENT_ID&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;CLIENT_SECRET&lt;/code&gt; values with your tokens: (variable naming should be in the form &lt;code class=&quot;language-text&quot;&gt;NAME=VALUE&lt;/code&gt;)&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token constant&quot;&gt;PORT&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;8888&lt;/span&gt;
+&lt;span class=&quot;token constant&quot;&gt;CLIENT_ID&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;&lt;/span&gt;
+&lt;span class=&quot;token constant&quot;&gt;CLIENT_SECRET&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;&lt;/span&gt;
+&lt;span class=&quot;token constant&quot;&gt;REDIRECTURI&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;http://localhost:8888/api/logged&quot;&lt;/span&gt;
+&lt;span class=&quot;token constant&quot;&gt;CLIENT_REDIRECTURI&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;http://localhost:3000/&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;PORT&lt;/code&gt; is where we’ll be serving our Node app locally. &lt;code class=&quot;language-text&quot;&gt;REDIRECTURI&lt;/code&gt; is our app’s endpoint where Spotify will redirect to after authorizing a user. And &lt;code class=&quot;language-text&quot;&gt;CLIENT_REDIRECTURI&lt;/code&gt; is where we’ll redirect to for the frontend of our app.&lt;/p&gt;
+&lt;p&gt;For Spotify to trust your endpoint, you need to add it to your app’s settings. Go to your app on &lt;a href=&quot;https://developer.spotify.com/dashboard/applications&quot;&gt;Spotify Dashboard&lt;/a&gt; and click Edit Settings.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7321d6b65af02b886d53b07a601ed01c/6c2f8/spotify-settings.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 82.91139240506328%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAACVElEQVQ4y3WUu47aUBCGje8iEYqUdjteJUAIlLxMSligo0uaVEhcuoRnSJkiUookS5VEWYGQAC+LDQZs8+fMwNnYXEYacbA9n/5/5pyjqKoKTdOQSqWgKAoqlQparRZqtRrq9Tpub295Xa1WeU3PKBuNBprNJrLZLNfJekUCdcPgB4PBAPEIggDL5RKr1RqO84DTKJVKXGfoBlKKgBKM0jgC2+02f7harbDdbrHZbOD7G16vfZ9/ZUZRhFwux3Vm2oLxzDoH9no9hgyHQ4xGI1yK/X7PSZHP57nOfvkc6ZsXB8uUEtjtdvlDx3FYJamIQ+IZB5JllSzrug5K0zQTwL/39xiPx/A87yIw3EcJINWTU4UWlmVx0otOp/PUQ7J+SSHFn/Uj6E1BKhQOVU29btkXA7gWBA2ic4XEUUiZbdtIp9P8ot/v8wQnkwnCMGSF8SQYqz4qLRaLXEf1zLB0C6ZunvVwOp1isVhgvV5zUgsoqafeysMuCvi7QqHAdSSMZqHYmuifZh7+xHpIU97tdmf9kz2VIfch91AVQyGYqRnipOgJhbQHZR+lVRnfl7/x7tcnOKGLUuFNcsoENATwdCjT2Qzz+ZyVPoqjt1y6cD0Xob/D18kd3t99xEPgovz6ALRM6z/QJOgRKC27rsv9ov49DSWMEIRBwvIradk0DkDa4TQU27TPLF+LsT/D5+k3+PstioVi0rI8KST5dMo8UZH+8VLwN6KnQuCX+U+8/fEBk50jLJeSQNqD8X1IlwMFWZW3Cp0YufbFOh7lcpnrMpkMc/4BmIGVvv6KCIEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Spotify app settings&quot;
+        title=&quot;Spotify app settings&quot;
+        src=&quot;/static/7321d6b65af02b886d53b07a601ed01c/f058b/spotify-settings.png&quot;
+        srcset=&quot;/static/7321d6b65af02b886d53b07a601ed01c/c26ae/spotify-settings.png 158w,
+/static/7321d6b65af02b886d53b07a601ed01c/6bdcf/spotify-settings.png 315w,
+/static/7321d6b65af02b886d53b07a601ed01c/f058b/spotify-settings.png 630w,
+/static/7321d6b65af02b886d53b07a601ed01c/40601/spotify-settings.png 945w,
+/static/7321d6b65af02b886d53b07a601ed01c/78612/spotify-settings.png 1260w,
+/static/7321d6b65af02b886d53b07a601ed01c/6c2f8/spotify-settings.png 2065w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;In the Redirect URIs field, add &lt;code class=&quot;language-text&quot;&gt;http://localhost:8888/api/logged&lt;/code&gt;. Scroll down and click Save.&lt;/p&gt;
+&lt;h3&gt;Spotify Authorization&lt;/h3&gt;
+&lt;p&gt;Next, we’ll create and export the &lt;code class=&quot;language-text&quot;&gt;AuthRoutes&lt;/code&gt; module we defined in &lt;code class=&quot;language-text&quot;&gt;index.js&lt;/code&gt;. Create a file named &lt;code class=&quot;language-text&quot;&gt;authRoutes.js&lt;/code&gt; inside the &lt;code class=&quot;language-text&quot;&gt;routes&lt;/code&gt; folder. Then import the necessary dependencies:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; express &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;express&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; router &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; express&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Router&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; fetch &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;node-fetch&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; encodeFormData &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;../helperFunctions/encodeFormData.js&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; querystring &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;querystring&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; router&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then, add the &lt;code class=&quot;language-text&quot;&gt;/login&lt;/code&gt; route:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;router&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;/login&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;req&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; res&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; scope &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;
+    &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;user-modify-playback-state
+    user-read-playback-state
+    user-read-currently-playing
+    user-library-modify
+    user-library-read
+    user-top-read
+    playlist-read-private
+    playlist-modify-public&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;redirect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;https://accounts.spotify.com/authorize?&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;
+    querystring&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;stringify&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      response_type&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;code&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      client_id&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; process&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;CLIENT_ID&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      scope&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; scope&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      redirect_uri&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; process&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;REDIRECTURI&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This route will accept get requests, authorize a user and redirect to our endpoint defined in &lt;code class=&quot;language-text&quot;&gt;REDIRECTURI&lt;/code&gt;, which is &lt;code class=&quot;language-text&quot;&gt;/api/logged&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;code class=&quot;language-text&quot;&gt;scope&lt;/code&gt; variable holds the permissions we need for our app. This also allows the users to know which data they’d be sharing with your app. You can see the full list &lt;a href=&quot;https://developer.spotify.com/documentation/general/guides/scopes&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Next, we create the &lt;code class=&quot;language-text&quot;&gt;/logged&lt;/code&gt; route:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;router&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;/logged&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;req&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; res&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; body &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    grant_type&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;authorization_code&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    code&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; req&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;code&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    redirect_uri&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; process&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;REDIRECTURI&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    client_id&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; process&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;CLIENT_ID&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    client_secret&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; process&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;CLIENT_SECRET&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;https://accounts.spotify.com/api/token&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    method&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;POST&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    headers&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token string&quot;&gt;&quot;Content-Type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;application/x-www-form-urlencoded&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token string&quot;&gt;&quot;Accept&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;application/json&quot;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    body&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;encodeFormData&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;body&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; response&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; query &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; querystring&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;stringify&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;redirect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;process&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;CLIENT_REDIRECTURI&lt;/span&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;query&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;When a user is authorized, Spotify will redirect to this route with a code that we’ll use to get access and refresh tokens (along with expiration date and scopes), then we redirect to our client with the same tokens which we’ll use to get user data. This may be confusing, but will make sense later.&lt;/p&gt;
+&lt;h3&gt;The Frontend&lt;/h3&gt;
+&lt;p&gt;Now, to test what we have, we need to run a client at port &lt;code class=&quot;language-text&quot;&gt;3000&lt;/code&gt;. I’m going with a React app seperately from our Node server, but it doesn’t matter how you go on about your client as long as your &lt;code class=&quot;language-text&quot;&gt;api/logged&lt;/code&gt; route redirects to where your app runs.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; Whether you run the client app seperately, or choose to serve from the same Node app, make sure to change the &lt;code class=&quot;language-text&quot;&gt;REDIRECTURI&lt;/code&gt; variable accordingly.&lt;/p&gt;
+&lt;h4&gt;Login&lt;/h4&gt;
+&lt;p&gt;In your client, simple make a GET call to &lt;code class=&quot;language-text&quot;&gt;http://localhost:8888/api/login&lt;/code&gt; either with a link, or a button. You’ll be redirected to Spotify login screen:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/cdbbd431997cb6ad1f55feb8d151e959/b5a09/spotify-login.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 122.78481012658229%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAYAAAAxFw7TAAAACXBIWXMAABYlAAAWJQFJUiTwAAADTUlEQVQ4y5VV3UsUURSfsiCIHoPErKx/IujF1x4qyHqKiohMLTWDTIhEo4Iek7AvX5TaXXVbv0IwqidfixKkVlvd1Vw/dme/Z3ZndnZ+3XOnq7M6K3XgcO+5c8/vnnPP79yRTNOEk5Ksra1hcnIS+Xye24ZhrM9L+UlwEOHU1dWF6upq9PT0wOfzobe3F319fUin0+ugm0XafEKBqWEU+Ee/fwYulwuyLCMajXIgGulAvrfgEGERWKFgO8tEaTGL5uS3JWURvabnkc3pUNQcgqFFfJuaxvQPP376Z5n+wpev3/E7vGLty2r8Xu3pSyJ0kin/MmqaPDjX7EHjw3HUdYyhoXMM9R2juHZ/GLXtI9xufjyOy20+nG5wsfURyAmV+xdEhAJwfjGCursvcaXlGerbXuB663NmW1rb2s1tsVZ7pxuXmp7i3hM3y0Zbj1ISdCD5/Okjdu2UULZDwr69e1B1uALHqiq5Hj1yEIcqy/m8onw/dpdJkCSJrR1AOLxkRcjuUrLnH4vF4BsaxqD3HbxeLwYGBuFye+DpH4DH089Ht7sfbjb3sj30fWLiA3RdL45QAOZyuaJa6nkDqqpC03TupLNCqGqW23YR9hZAkmw2y1VlSgcQEIFGozIfhWYyGc5Lmts7pwiQgJLJJBKJBBRFYU4KUqkUXxf3XJKZgjZ2g04NBOYwMzuLubl5hEILvFvCy8v8wqlDitXgGYiGcLhDDTIrDBWHIlUUFSmWVjqdcQCzdFtAinB+PshemYhjStupIyCNsVicq72lKILttCQgVTUejyPJCkEpx6k4qmgrdodG3tKCAYOpZRvOgKblBTWjrFOCqk0V/hdxrPJCchmhWBg6e0WIX3aqxNQErg6147znNmpHOnF99AHOum/hxvtHSObSzimHU2tYiC5BSW/wT1RwNS3jZF89Try+iFNvbuLM20Ycf3UBNe4WyOywotem1HO+8YSa/5kyOZjWSJcvoqKfVCAQQDAYZBpiD26Ik178U6ggho2D5uY7JKJavcr6mVWcihKJRPl/hLi5urrKD6G25P2uZvn+ksRW/ja+pmn8BSHqrDAQ4iUBRRhwVJZtezTOCBpLEptaSSO1PVl85G2W37D5Ho2Pdv8/gq84PC27sJIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Spotify login screen&quot;
+        title=&quot;Spotify login screen&quot;
+        src=&quot;/static/cdbbd431997cb6ad1f55feb8d151e959/f058b/spotify-login.png&quot;
+        srcset=&quot;/static/cdbbd431997cb6ad1f55feb8d151e959/c26ae/spotify-login.png 158w,
+/static/cdbbd431997cb6ad1f55feb8d151e959/6bdcf/spotify-login.png 315w,
+/static/cdbbd431997cb6ad1f55feb8d151e959/f058b/spotify-login.png 630w,
+/static/cdbbd431997cb6ad1f55feb8d151e959/40601/spotify-login.png 945w,
+/static/cdbbd431997cb6ad1f55feb8d151e959/78612/spotify-login.png 1260w,
+/static/cdbbd431997cb6ad1f55feb8d151e959/b5a09/spotify-login.png 1360w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;When you login with your account, you’ll be redirected to the endpoint defined in &lt;code class=&quot;language-text&quot;&gt;REDIRECTURI&lt;/code&gt;.&lt;/p&gt;
+&lt;h4&gt;Getting the parameters from the URL&lt;/h4&gt;
+&lt;p&gt;Once it’s redirected, the URL should look like this:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;http://localhost:3000/?access_token=xxxxxxxxxx&amp;amp;token_type=Bearer&amp;amp;expires_in=3600&amp;amp;refresh_token=xxxxxxxxxx&amp;amp;scope=xxxxxxxxxx-xxxxxxxxxx&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To get the parameters, we can use the following method, which will return them as an object:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;getHashParams&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; hashParams &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; e&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    r &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token regex&quot;&gt;&lt;span class=&quot;token regex-delimiter&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token regex-source language-regex&quot;&gt;([^&amp;amp;;=]+)=?([^&amp;amp;;]*)&lt;/span&gt;&lt;span class=&quot;token regex-delimiter&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token regex-flags&quot;&gt;g&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    q &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;location&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;search&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;e &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; r&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;q&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    hashParams&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;e&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;decodeURIComponent&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;e&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; hashParams&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Get Authenticated User Data&lt;/h3&gt;
+&lt;p&gt;Using the tokens we received, we can make calls to Spotify services to get user data. For example, to get the current authenticated user, we can do so like the following:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; url &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;https://api.spotify.com/v1/me&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; headers &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  Authorization&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Bearer &apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; accessToken
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token function&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;url&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; headers &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; response&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// use data&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// handle error&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The response should look something like this:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/017a03e3db82cda9116eb5eb3d4c0898/a4f81/spotify-user-data-example.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 22.151898734177216%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAyUlEQVQY01WPWW7DMAwFfRTHS21t1uIldtIm8f0PNSVTtEA/BtQjBUpTpSnzvL7Yy537deN5rKQUyaUQUyLnIjlTJC/LwjzPxBjfJJn/5r7vaduWyg+BM558xpXHvvG1r9y2hW0ulBhYBK3OOUIIWGu5XC7Udf2H5qZpfhaGceI1Pzj3zJE9wY4kb0nOEMxA8YYo52EYMOPIKBhj/lWdKV3XUdkPy60c7GvBWSdYgvc4xckD0yRKqp7fyqqpipP0tae/9nJXq2p/A+Evenbj0huwAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Spotify user data example&quot;
+        title=&quot;Spotify user data example&quot;
+        src=&quot;/static/017a03e3db82cda9116eb5eb3d4c0898/f058b/spotify-user-data-example.png&quot;
+        srcset=&quot;/static/017a03e3db82cda9116eb5eb3d4c0898/c26ae/spotify-user-data-example.png 158w,
+/static/017a03e3db82cda9116eb5eb3d4c0898/6bdcf/spotify-user-data-example.png 315w,
+/static/017a03e3db82cda9116eb5eb3d4c0898/f058b/spotify-user-data-example.png 630w,
+/static/017a03e3db82cda9116eb5eb3d4c0898/40601/spotify-user-data-example.png 945w,
+/static/017a03e3db82cda9116eb5eb3d4c0898/78612/spotify-user-data-example.png 1260w,
+/static/017a03e3db82cda9116eb5eb3d4c0898/a4f81/spotify-user-data-example.png 1508w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;Get User’s Top Played Artists&lt;/h3&gt;
+&lt;p&gt;As for another example, you can get a user’s top played artists like the following:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; url &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;https://api.spotify.com/v1/me/top/artists&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; headers &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  Authorization&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Bearer &apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; accessToken
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token function&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;url &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; headers &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; response&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// use data&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// handle error&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The response should look something like this:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/74612242a737c25f83ff041cce1621f8/58354/spotify-top-artists-data-example.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 41.77215189873418%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABUElEQVQoz12RWY6EMAxEOUvv8ME0EJIQCHvvrb7/bWpSbkUjzYdlO8bPZZMUPyWccuiMwtBotKqADzGt11V4q+GthlIVirJEWRSoqgrWWhhjoLWWPM9zZFmGJD1kaM4NutbBdy2MrsU7a+BdAx/eB+/RNA2cc2J932OeZwzDIEY4Yfv9HsnxcERd1hjGAW3XhYkmxCN0mO5DYxdgY8i7UCOI8e12w+Vywf1+l5jDdrsdttstktPhBF0ajNMIH5q5xjRN8hGnE8KcNeYERhD96/US1VT3BR5PsMpiWRdpIGhZFvEEEbCuq9S4Jt8ijPb5fP4pPKawlf3epP/egzE9YTQOiErjyo/HA8/nU6xt2z+FaQCas8G8zNJEEBVxagRGhREYQYS+32+5L3+KAPlTVK6kgYW6rqWJt2ROY04VvCNzbnC9XkU5obxhmqbYbDb4BWjtDRTn9NaPAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Spotify user top artists data example&quot;
+        title=&quot;Spotify user top artists data example&quot;
+        src=&quot;/static/74612242a737c25f83ff041cce1621f8/f058b/spotify-top-artists-data-example.png&quot;
+        srcset=&quot;/static/74612242a737c25f83ff041cce1621f8/c26ae/spotify-top-artists-data-example.png 158w,
+/static/74612242a737c25f83ff041cce1621f8/6bdcf/spotify-top-artists-data-example.png 315w,
+/static/74612242a737c25f83ff041cce1621f8/f058b/spotify-top-artists-data-example.png 630w,
+/static/74612242a737c25f83ff041cce1621f8/40601/spotify-top-artists-data-example.png 945w,
+/static/74612242a737c25f83ff041cce1621f8/78612/spotify-top-artists-data-example.png 1260w,
+/static/74612242a737c25f83ff041cce1621f8/58354/spotify-top-artists-data-example.png 1396w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Spotify has a rich API with many features. You can see all the services &lt;a href=&quot;https://developer.spotify.com/documentation/web-api/reference&quot;&gt;here on official documentation&lt;/a&gt;. Using what we’ve created so far, we can interact with all of the services by providing the access tokens and required parameters.&lt;/p&gt;
+&lt;p&gt;There’s currently no API rate limit, but it’s best to retrieve multiple data entities at once to avoid hitting the limit. If you get the &lt;code class=&quot;language-text&quot;&gt;status code 429&lt;/code&gt;, it means your app has reached the limit. Check the &lt;code class=&quot;language-text&quot;&gt;Retry-After&lt;/code&gt; header to see how long you should wait before making another call.&lt;/p&gt;
+&lt;h3&gt;Deployment&lt;/h3&gt;
+&lt;p&gt;When you deploy your apps, all you have to do is to update the environment variables. Update the &lt;code class=&quot;language-text&quot;&gt;localhost&lt;/code&gt; values to whatever your domain is. And make sure to update the values on your app settings on &lt;a href=&quot;https://developer.spotify.com/dashboard/applications&quot;&gt;Spotify Dashboard&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Host Gatsby site on GitHub Pages with custom domains]]></title><description><![CDATA[Now, there are many posts and informations about the topic but for my case, I had to stick pieces together from many places to get this…]]></description><link>https://ahmetomer.net/host-gatsby-on-github-page-with-custom-domains/</link><guid isPermaLink="false">https://ahmetomer.net/host-gatsby-on-github-page-with-custom-domains/</guid><pubDate>Wed, 03 Feb 2021 12:19:03 GMT</pubDate><content:encoded>&lt;p&gt;Now, there are many posts and informations about the topic but for my case, I had to stick pieces together from many places to get this simple site up. For starters, I’m assuming you’ve already purchased a domain name, have a GitHub account and Node installed. If not, it’s fairly easy to do all that following official docs. And for the domain, of course, you need money.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; This post isn’t Gatsby-specific except for few details and is applicable to basically any static site to be hosted with custom domains on GitHub Pages. And for this case I’m using GoDaddy, but the main points hold the same for other providers as well.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3&gt;1 - Setting up Gatsby&lt;/h3&gt;
@@ -138,4 +454,4 @@
 &lt;/table&gt;
 &lt;p&gt;The records above will connect your domain name to the website hosted at GitHub Pages. As of Februray 2021, GitHub pages IPs are as such. If it doesn’t seem to work, visit GitHub Pages docs to find the latest IP addresses.&lt;/p&gt;
 &lt;p&gt;If you don’t have an SSL certificate, you can use GitHub’s certificates. You can find the option to enable HTTPS in the repo settings.&lt;/p&gt;
-&lt;p&gt;This is all needed to do. Things may take a while for everything to go live.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[Hello world]]></description><link>https://ahmetomer.net/hello-world/</link><guid isPermaLink="false">https://ahmetomer.net/hello-world/</guid><pubDate>Sun, 03 Jan 2021 11:03:33 GMT</pubDate><content:encoded>&lt;p&gt;Hello world&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;This is all needed to do. It may take a while for everything to go live.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[Hello world]]></description><link>https://ahmetomer.net/hello-world/</link><guid isPermaLink="false">https://ahmetomer.net/hello-world/</guid><pubDate>Sun, 03 Jan 2021 11:03:33 GMT</pubDate><content:encoded>&lt;p&gt;Hello world&lt;/p&gt;</content:encoded></item></channel></rss>
