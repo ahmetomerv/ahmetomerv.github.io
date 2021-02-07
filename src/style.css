@@ -413,7 +413,19 @@ a:focus {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background: #ebedef !important;
+  background: #f8fcff !important;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  font-size: .93em !important;
+  color: #2d2d2d !important;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #109ad6 !important;
 }
 
 .token.operator,
@@ -434,5 +446,11 @@ pre[class*="language-"] {
   ul,
   ol {
     list-style-position: inside;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .iframe-container iframe {
+    width: 100%;
   }
 }
