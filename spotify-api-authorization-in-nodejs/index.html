@@ -115,7 +115,7 @@ application<span class="token punctuation">.</span><span class="token function">
 <span class="token keyword">const</span> querystring <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'querystring'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 module<span class="token punctuation">.</span>exports <span class="token operator">=</span> router<span class="token punctuation">;</span></code></pre></div>
-<p>Then, add the <code class="language-text">/login</code> route:</p>
+<p>Then, add the <code class="language-text">/api/login</code> route:</p>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">router<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/login'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> scope <span class="token operator">=</span>
     <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">user-modify-playback-state
@@ -136,9 +136,9 @@ module<span class="token punctuation">.</span>exports <span class="token operato
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
-<p>This route will accept get requests, authorize a user and redirect to our endpoint defined in <code class="language-text">REDIRECTURI</code>, which is <code class="language-text">/api/logged</code>.</p>
+<p>This route will accept get requests at <code class="language-text">/api/login</code>, authorize a user and redirect to our endpoint defined in <code class="language-text">REDIRECTURI</code>, which is <code class="language-text">/api/logged</code>.</p>
 <p>The <code class="language-text">scope</code> variable holds the permissions we need for our app. This also allows the users to know which data they’d be sharing with your app. You can see the full list <a href="https://developer.spotify.com/documentation/general/guides/scopes">here</a>.</p>
-<p>Next, we create the <code class="language-text">/logged</code> route:</p>
+<p>Next, we create the <code class="language-text">/api/logged</code> route:</p>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">router<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/logged'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> body <span class="token operator">=</span> <span class="token punctuation">{</span>
     grant_type<span class="token operator">:</span> <span class="token string">'authorization_code'</span><span class="token punctuation">,</span>
@@ -164,7 +164,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <p>When a user is authorized, Spotify will redirect to this route with a code that we’ll use to get access and refresh tokens (along with expiration date and scopes), then we redirect to our client with the same tokens which we’ll use to get user data. This may be confusing, but will make sense later.</p>
 <h3>The Frontend</h3>
-<p>Now, to test what we have, we need to run a client at port <code class="language-text">3000</code>. I’m going with a React app seperately from our Node server, but it doesn’t matter how you go on about your client as long as your <code class="language-text">api/logged</code> route redirects to where your app runs.</p>
+<p>Now, to test what we have, we need to run a client at port <code class="language-text">3000</code>. I’m going with a React app seperately from our Node server, but it doesn’t matter how you go on about your client as long as your <code class="language-text">/api/logged</code> route redirects to where your app runs.</p>
 <p><em>Note:</em> Whether you run the client app seperately, or choose to serve from the same Node app, make sure to change the <code class="language-text">REDIRECTURI</code> variable accordingly.</p>
 <h4>Login</h4>
 <p>In your client, simply make a GET call to <code class="language-text">http://localhost:8888/api/login</code> either with a link, or a button. You’ll be redirected to Spotify login screen:</p>
