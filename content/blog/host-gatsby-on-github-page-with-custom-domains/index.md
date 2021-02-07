@@ -88,4 +88,4 @@ The records above will connect your domain name to the website hosted at GitHub 
 
 If you don't have an SSL certificate, you can use GitHub's certificates. You can find the option to enable HTTPS in the repo settings.
 
-This is all needed to do. Things may take a while for everything to go live.
+This is all needed to do. It may take a while for everything to go live.

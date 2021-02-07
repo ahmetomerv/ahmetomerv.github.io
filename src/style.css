@@ -404,6 +404,8 @@ a:focus {
   margin: var(--spacing-0);
 }
 
+/* Custom styles for code highlighting */
+
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
 }
@@ -416,6 +418,14 @@ a:focus {
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   background: #ebedef !important;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  background: none !important;
 }
 
 /* Media queries */
