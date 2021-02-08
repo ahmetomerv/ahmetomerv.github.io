@@ -80,13 +80,19 @@ In the Redirect URIs field, add `http://localhost:8888/api/logged`. Scroll down 
 
 ### Spotify Authorization
 
-Next, we'll create and export the `AuthRoutes` module we defined in `index.js`. Create a file named `authRoutes.js` inside the `routes` folder. Then import the necessary dependencies:
+Next, we'll create and export the `AuthRoutes` module we defined in `index.js`. Create a file named `authRoutes.js` inside the `routes` folder. Then import the necessary dependencies and add the `encodeFormData` method:
 ```javascript
 const express = require('express');
 const router = express.Router();
 const fetch = require('node-fetch');
-const encodeFormData = require('../helperFunctions/encodeFormData.js');
 const querystring = require('querystring');
+
+// this can be used as a seperate module
+const encodeFormData = (data) => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+}
 
 module.exports = router;
 ```
