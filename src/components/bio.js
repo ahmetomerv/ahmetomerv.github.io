@@ -28,7 +28,6 @@ const Bio = () => {
           social {
             twitter
             dribbble
-            behance
             github
           }
         }
@@ -69,10 +68,6 @@ const Bio = () => {
             <span> / </span>
             <a className="bio-link" target="_blank" rel="noreferrer" href={`${social?.dribbble || ``}`}>
               Dribbble
-            </a>
-            <span> / </span>
-            <a className="bio-link" target="_blank" rel="noreferrer" href={`${social?.behance || ``}`}>
-              Behance
             </a>
           </div>
         </React.Fragment>

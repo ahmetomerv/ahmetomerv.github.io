@@ -22,7 +22,6 @@ const SEO = ({ description, lang, meta, title }) => {
             social {
               twitter
               dribbble
-              behance
               github
             }
           }

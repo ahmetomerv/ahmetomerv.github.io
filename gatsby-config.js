@@ -10,7 +10,6 @@ module.exports = {
       twitter: 'https://twitter.com/eswordert',
       github: 'https://github.com/ahmetomerv',
       dribbble: 'https://dribbble.com/ahmetomer',
-      behance: 'https://behance.net/ahmetomerv',
     },
   },
   plugins: [
