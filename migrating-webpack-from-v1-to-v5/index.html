@@ -164,7 +164,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   optimization<span class="token operator">:</span> commonConfig<span class="token punctuation">.</span>optimization<span class="token punctuation">,</span>
 
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
-<p>For minifying JavaScript, we used to use the <a href="https://github.com/webpack-contrib/terser-webpack-plugin">terser-webpack-plugin</a> but it is no longer required in Webpack v5 or above. Setting <code class="language-text">mode: production</code> will enable it by default. You can delete the package.</p>
+<p>For minifying JavaScript, we used to use the <a href="https://github.com/webpack-contrib/terser-webpack-plugin">terser-webpack-plugin</a> but it is no longer required in Webpack v4 or above. Setting <code class="language-text">mode: production</code> will enable it by default. You can delete the package if you have it installed.</p>
 <h4>Development Configuration</h4>
 <p>Create a file named <code class="language-text">webpack.config.dev.js</code> and use the following settings:</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">var</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
