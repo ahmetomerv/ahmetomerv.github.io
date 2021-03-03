@@ -243,7 +243,7 @@ module.exports = {
 };
 ```
 
-For minifying JavaScript, we used to use the [terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin) but it is no longer required in Webpack v5 or above. Setting `mode: production` will enable it by default. You can delete the package.
+For minifying JavaScript, we used to use the [terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin) but it is no longer required in Webpack v4 or above. Setting `mode: production` will enable it by default. You can delete the package if you have it installed.
 
 #### Development Configuration
 
