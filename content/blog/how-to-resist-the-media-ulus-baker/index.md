@@ -1,7 +1,7 @@
 ---
 title: How to Resist the Media - Ulus Baker
 date: "2021-03-07T22:23:33.284Z"
-description: How to Resist the Media by Ulus Baker, English
+description: English translation of the article published in Birikim Issue 68-69 - December/January 1995
 ---
 
 ![Ulus Baker](./ulus-baker.png "Ulus Baker")
