@@ -304,24 +304,23 @@ Webpack has a very rich API with many options, check the official [documentation
 
 ---
 
-_Project structure for reference:_
+_Project structure used in this post for reference:_
 ```
-root
-└──dist
-│  - bundle.js
-│  - vendor.js
-│  - style.css
-|
-└──assets
-|  └─fonts
-|  └──img
-|  └──js
-|  └──less
-|     - index.js
-|
-│  - package.json
-│  - webpack.config.common.js
-|  - webpack.config.dev.js
-|  - webpack.config.prod.js
-|  - .babelrc   
+├─ dist
+│  ├─ bundle.js
+│  ├─ vendor.js
+│  └─ vendor.js
+│
+├─ assets
+│  ├─ fonts
+│  ├─ img
+│  ├─ js
+│  ├─ less
+│  └─ index.js
+│
+├─ package.json
+├─ webpack.config.common.js
+├─ webpack.config.dev.js
+├─ webpack.config.prod.js
+└─ .babelrc  
 ```
