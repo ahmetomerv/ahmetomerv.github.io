@@ -1,7 +1,7 @@
 ---
 title: Migrating Webpack from v1 to v5
 date: "2021-03-01T21:33:03.284Z"
-description: Wepack migration including Babel, CSS/LESS and file loaders with custom configurations
+description: Webpack migration including Babel, CSS/LESS and file loaders with custom configurations
 ---
 
 I'd recently upgraded the Webpack version in one of our projects at work from `1.13.2` to `5.23.0` (the latest as of 2021‑02‑22). The JavaScript bundle in production was roughly a 2 MB file which was way larger than it supposed to be, resulting in long download times. So, as a first step to optimize the initial loading experience, it was necessary to first upgrade the Webpack version and then split the JavaScript into two entries: main source code and node modules (there are advanced techniques I've yet managed to apply, maybe in a future post).
