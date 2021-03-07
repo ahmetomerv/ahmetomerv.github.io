@@ -305,11 +305,11 @@ Webpack has a very rich API with many options, check the official [documentation
 ---
 
 _Project structure used in this post for reference:_
+
 ```
 ├─ dist
 │  ├─ bundle.js
 │  ├─ vendor.js
-│  └─ vendor.js
 │
 ├─ assets
 │  ├─ fonts
