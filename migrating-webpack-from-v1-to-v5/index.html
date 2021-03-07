@@ -215,25 +215,24 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <p>All that’s left now is to run the scripts we defined eariler in <code class="language-text">package.json</code>.</p>
 <p>Webpack has a very rich API with many options, check the official <a href="https://webpack.js.org/concepts/">documentation</a> for more details. And let me know if anything went wrong with this guide.</p>
 <hr>
-<p><em>Project structure for reference:</em></p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">root
-└──dist
-│  - bundle.js
-│  - vendor.js
-│  - style.css
-|
-└──assets
-|  └─fonts
-|  └──img
-|  └──js
-|  └──less
-|     - index.js
-|
-│  - package.json
-│  - webpack.config.common.js
-|  - webpack.config.dev.js
-|  - webpack.config.prod.js
-|  - .babelrc   </code></pre></div></section><footer><div class="bio"><div class="bio-avatar gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px"><img aria-hidden="true" src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQFAgP/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAcvyrpjKWiOsrkZv/8QAHBAAAgICAwAAAAAAAAAAAAAAAQIABBAREiEy/9oACAEBAAEFAmQg6OC7KbD8XMLEyx531//EABcRAQADAAAAAAAAAAAAAAAAAAEAEDH/2gAIAQMBAT8Bbdn/xAAXEQADAQAAAAAAAAAAAAAAAAAAARAR/9oACAECAQE/AUbEf//EABwQAAICAgMAAAAAAAAAAAAAAAABAhEhMRBRcf/aAAgBAQAGPwKtmuMikmX2ZIC8P//EAB0QAQADAAEFAAAAAAAAAAAAAAEAESExQVFhcZH/2gAIAQEAAT8hdjh1Im6vkpHiFRHfJYxSVmQ2mrF8xG1Ffoll/Cf/2gAMAwEAAgADAAAAENwnPP/EABgRAQEAAwAAAAAAAAAAAAAAAAEAESFB/9oACAEDAQE/EOmTGmZz/8QAGBEBAAMBAAAAAAAAAAAAAAAAAAERMUH/2gAIAQIBAT8Q4UQw/8QAGxABAQADAQEBAAAAAAAAAAAAAREAITFRkXH/2gAIAQEAAT8QmoNupPbhoGpQVzFwUJ0mVsWUKS9xRqyALX33LwgDtbc2EIQ1NYy16l+GLU7lr8z/2Q==" alt="Ahmet Ömer" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms"/><noscript><picture><source srcset="/static/ea623ca0830003068a9052def3eed1b8/340ed/profile-pic.jpg 1x,
+<p><em>Project structure used in this post for reference:</em></p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">├─ dist
+│  ├─ bundle.js
+│  ├─ vendor.js
+│  └─ vendor.js
+│
+├─ assets
+│  ├─ fonts
+│  ├─ img
+│  ├─ js
+│  ├─ less
+│  └─ index.js
+│
+├─ package.json
+├─ webpack.config.common.js
+├─ webpack.config.dev.js
+├─ webpack.config.prod.js
+└─ .babelrc  </code></pre></div></section><footer><div class="bio"><div class="bio-avatar gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px"><img aria-hidden="true" src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQFAgP/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAcvyrpjKWiOsrkZv/8QAHBAAAgICAwAAAAAAAAAAAAAAAQIABBAREiEy/9oACAEBAAEFAmQg6OC7KbD8XMLEyx531//EABcRAQADAAAAAAAAAAAAAAAAAAEAEDH/2gAIAQMBAT8Bbdn/xAAXEQADAQAAAAAAAAAAAAAAAAAAARAR/9oACAECAQE/AUbEf//EABwQAAICAgMAAAAAAAAAAAAAAAABAhEhMRBRcf/aAAgBAQAGPwKtmuMikmX2ZIC8P//EAB0QAQADAAEFAAAAAAAAAAAAAAEAESExQVFhcZH/2gAIAQEAAT8hdjh1Im6vkpHiFRHfJYxSVmQ2mrF8xG1Ffoll/Cf/2gAMAwEAAgADAAAAENwnPP/EABgRAQEAAwAAAAAAAAAAAAAAAAEAESFB/9oACAEDAQE/EOmTGmZz/8QAGBEBAAMBAAAAAAAAAAAAAAAAAAERMUH/2gAIAQIBAT8Q4UQw/8QAGxABAQADAQEBAAAAAAAAAAAAAREAITFRkXH/2gAIAQEAAT8QmoNupPbhoGpQVzFwUJ0mVsWUKS9xRqyALX33LwgDtbc2EIQ1NYy16l+GLU7lr8z/2Q==" alt="Ahmet Ömer" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms"/><noscript><picture><source srcset="/static/ea623ca0830003068a9052def3eed1b8/340ed/profile-pic.jpg 1x,
 /static/ea623ca0830003068a9052def3eed1b8/32ce1/profile-pic.jpg 1.5x,
 /static/ea623ca0830003068a9052def3eed1b8/04d41/profile-pic.jpg 2x" /><img loading="lazy" width="50" height="50" srcset="/static/ea623ca0830003068a9052def3eed1b8/340ed/profile-pic.jpg 1x,
 /static/ea623ca0830003068a9052def3eed1b8/32ce1/profile-pic.jpg 1.5x,
