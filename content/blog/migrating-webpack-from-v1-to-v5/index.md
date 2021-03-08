@@ -309,7 +309,7 @@ _Project structure used in this post for reference:_
 ```
 ├─ dist
 │  ├─ bundle.js
-│  ├─ vendor.js
+│  └─ vendor.js
 │
 ├─ assets
 │  ├─ fonts
