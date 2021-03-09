@@ -332,6 +332,10 @@ a:focus {
   color: #000;
 }
 
+.post-content img {
+  width: 100%;
+}
+
 .gatsby-resp-image-wrapper {
   margin: 2em 0;
 }
