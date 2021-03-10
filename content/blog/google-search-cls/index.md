@@ -19,6 +19,8 @@ You'd think that people at Google would know best about good usability, at the e
 Another joke I'd like to tell is that Google itself advocates against Cumulative Layout Shift and recommends minimizing unexpected layout shifts for better usability. Funny, isn't it?
 
 At [web.dev](https://web.dev) (an official Google website for web best practices), the article named [Optimize Cumulative Layout Shift
-](https://web.dev/optimize-cls/) starts with the following words: _"Learn how to avoid sudden layout shifts to improve user-experience."_
+](https://web.dev/optimize-cls/) starts with the following words: _"Learn how to avoid sudden layout shifts to improve user-experience."_ 
+
+_Sudden layout shifts_? Hello??
 
 Someone thought of this feature, talked about it to fellow teammates, and perhaps they agreed on it too, they planned it, approved it, developed it, tested it, and shipped it to billions of users. The only possible and reasonable explanation I can think of for why they don't/wouldn't see this as a major example of CLS, is that they consider it done for purpose. That it's not caused by some JavaScript or CSS loading asynchronously. That it's not a bug. The whole idea that CLS's aren't good is that they cause unexpected behavior without user action, be it intended or not, be it a bug or a feature. It isn't helpful, especially when the said "feature" goes against a behavior that users made a habit of for years — clicking a link on the search page and finding the same results if they go back. It's not even necessary to measure some metrics or score to realize how terrible an idea this is. I do hope Google will come to its senses.
