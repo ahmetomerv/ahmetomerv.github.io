@@ -262,7 +262,7 @@ a:focus {
 
 .global-header {
   font-family: sans-serif;
-  margin-bottom: var(--spacing-8);
+  margin-bottom: var(--spacing-1);
 }
 
 .main-heading {

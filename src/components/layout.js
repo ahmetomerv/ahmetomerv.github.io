@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
+import Toggle from './Toggle';
 
 const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  const isRootPath = location.pathname === rootPath
-  let header
+  const rootPath = `${__PATH_PREFIX__}/`;
+  const isRootPath = location.pathname === rootPath;
+  let header;
   const data = useStaticQuery(graphql`
     query SecondBioQuery {
       site {
@@ -17,14 +18,12 @@ const Layout = ({ location, title, children }) => {
         }
       }
     }
-  `)
+  `);
   const social = data.site.siteMetadata?.social;
 
   if (isRootPath) {
     header = (
-      <h1 className="main-heading">
-        <Link to="/">{title}</Link>
-      </h1>
+      <div></div>
     )
   } else {
     header = (
@@ -69,4 +68,4 @@ const Layout = ({ location, title, children }) => {
   )
 }
 
-export default Layout
+export default Layout;
