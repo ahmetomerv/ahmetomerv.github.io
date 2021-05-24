@@ -10,7 +10,7 @@ Went a bit off track there. Coming back to the subject, I decided to write about
 
 In the article, Joel gives a hypothetical example of a programmer who comes by to your desk and boasts about how great he is about this and that. In my mind, I'm like "why is this programmer supposed to be a male??", yes the tech industry (perhaps like most) is male-dominant. Yes, there's a high chance that this programmer would be a guy, in 9 out of 10 times that could be true. But when writing about hypothetical situations, why should we assume/decide someone's gender based on stereotypes? It just doesn't feel right when you read that. It seems way off.
 
-Unless we're referring to someone specific, say, Sarah or Paul, I think it's best to use "they" instead. That way, the reader's mind isn't forced to think of this imaginary person as a man or a woman and form our opinion around that gender, because it is not a specific person, thus it's more suitable to use genderless pronouns.
+Unless we're referring to someone specific, say, Sarah or Paul, I think it's best to use "they" instead. That way, the reader's mind isn't forced to think of this imaginary person as a man or a woman and form their opinion around that gender, because it is not a specific person, thus it's more suitable to use genderless pronouns, aka "they" (I've looked up online and there seems to be a ton of new pronouns added to the language, but I'm sticking to the good old they here).
 
 An example from the article I'd mentioned earlier: (condensed some things for clarity)
 
