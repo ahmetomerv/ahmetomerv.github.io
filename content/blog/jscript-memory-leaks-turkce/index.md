@@ -43,7 +43,7 @@ Sonunda üçüncü programı, [queuetest3](https://www.crockford.com/javascript/
 
 `attachEvent()` ile eklenen işleyicilerin bulunamayacağını ve sızdırmaya devam edeceğini unutmayın.
 
-Güncelleme: Microsoft bu problem için bir düzeltme yayınladı: [929874](http://support.microsoft.com/kb/929874/). Tüm kullanıcılarınızın yamayı kabul ettiğinden eminseniz, o zaman artık temizlemeye (`purge` fonksiyonuyla) yapmanıza gerek yok. Ne yazık ki bunu belirlemek mümkün değildir ve bu nedenle temizleme muhtemelen IE6'nın geri kalan ürün ömrü boyunca gerekli olacaktır.
+Güncelleme: Microsoft bu problem için bir düzeltme yayınladı: [929874](http://support.microsoft.com/kb/929874/). Tüm kullanıcılarınızın yamayı kabul ettiğinden eminseniz, o zaman artık temizleme (`purge` fonksiyonuyla) yapmanıza gerek yok. Ne yazık ki bunu belirlemek mümkün değildir ve bu nedenle temizleme muhtemelen IE6'nın geri kalan ürün ömrü boyunca gerekli olacaktır.
 
 Web'in doğası böyledir. Hataları düzeltmek, hataları ortadan kaldırmaz.
 
