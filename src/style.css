@@ -291,6 +291,7 @@ a:focus {
 }
 
 .post-list-item h2 {
+  display: inline-block;
   font-family: var(--fontFamily-sans);
   font-weight: 500;
   font-size: var(--fontSize-2);
@@ -305,6 +306,7 @@ a:focus {
 }
 
 .post-list-date {
+  display: block;
   font-family: sans-serif;
   color: #8b8b8b;
   font-size: .75em;
