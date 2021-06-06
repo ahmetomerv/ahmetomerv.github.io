@@ -235,6 +235,7 @@ table {
 
 table thead tr th {
   border-bottom: 1px solid var(--color-accent);
+  text-align: left;
 }
 
 /* Link */
