@@ -8,7 +8,7 @@ And you think you're so clever and classless and free. — John Lennon
 
 [JavaScript](http://www.crockford.com/javascript), sınıfsız, nesne yönelimli bir dildir ve bu nedenden dolayı klasik kalıtım (classical inheritance) yerine prototip kalıtımı kullanır. Bu, C++ ve Java gibi geleneksel nesne yönelimli dillere alışkın programcılar için kafa karıştırıcı olabilir. JavaScript'in prototip kalıtımı, birazdan göreceğimiz gibi, klasik kalıtımdan daha fazla ifade gücüne sahiptir.
 
-Ama öncelikle, kalıtım konusunu niye önsemsiyoruz ki? Her şeyden önce bunun iki nedeni var. Birincisi tip konusunda sağlanan kolaylıktır. Dil sisteminin benzer sınıfların referanslarını otomatik olarak yaymasını (*cast*) istiyoruz. Nesne referanslarının tip çevirimlerini açık (explicit) ve rutin bir şekilde gerektiren bir tip sistemi çok az tip-güvenliği sağlar. Bu durum sıkı-tipli dillerde kritik öneme sahiptir, fakat nesne referanslarının çevirimlere ihtiyaç duymadığı JavaScript gibi serbest-tipli dillerde bunun önemi yoktur.
+Ama öncelikle, kalıtım konusunu niye önsemsiyoruz ki? Her şeyden önce bunun iki nedeni var. Birincisi tip konusunda sağlanan kolaylıktır. Dil sisteminin benzer sınıfların referanslarını otomatik olarak yaymasını (*cast*) istiyoruz. Nesne referanslarının tip çevirimlerini açık (explicit) ve rutin bir şekilde gerektiren bir tip sistemi çok zayıf bir tip-güvenliği sağlar. Bu durum sıkı-tipli dillerde kritik öneme sahiptir, fakat nesne referanslarının çevirimlere ihtiyaç duymadığı JavaScript gibi serbest-tipli dillerde bunun önemi yoktur.
 
 | Java                        | JavaScript                    
 |-----------------------------|-------------------------------
