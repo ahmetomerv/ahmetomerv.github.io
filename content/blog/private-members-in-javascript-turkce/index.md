@@ -118,9 +118,9 @@ function Container(param) {
 
 `service` metodu ayrıcalıklı bir metottur. `myContainer.service()` metodu çağrıldığı ilk üç seferde `'abc'` dönecektir. Ondan sonra ise `null` dönecek. `service` metodu, özel `secret` değişkenine erişen özel `dec` metodunu çağırır. `service` metodu diğer nesne ve metodlara açıktır, ancak özel üyelere direkt erişime izin vermez.
 
-### Kapanım (Closures)
+### Kapanımlar (Closures)
 
-Bu genel, özel ve ayrıcalıklı üye kalıplarını uygulamak JavaScript'in *kapanım (closures)* özelliği sayesinde mümkündür. Bunun anlamı, bir iç fonksiyonun, dış fonksiyon bir değer geri döndükten sonra bile, dış fonksiyonunu değişkenlerine ve parametrelerine her zaman erişimi olmasıdır. Dilin son derece güçlü bir özelliğidir bu. Bu, [How JavaScript Works](https://www.howjavascriptworks.com/) kitabında açıklanmıştır.
+Bu genel, özel ve ayrıcalıklı üye kalıplarını uygulamak JavaScript'in *kapanımlar (closures)* özelliği sayesinde mümkündür. Bunun anlamı, bir iç fonksiyonun, dış fonksiyon bir değer geri döndükten sonra bile, dış fonksiyonunu değişkenlerine ve parametrelerine her zaman erişimi olmasıdır. Dilin son derece güçlü bir özelliğidir bu. Bu, [How JavaScript Works](https://www.howjavascriptworks.com/) kitabında açıklanmıştır.
 
 Özel ve ayrıcalıklı üyeler sadece bir nesne başlatıldığında oluşturulabilir. Genel üyeler ise herhangi bir zamanda eklenebilir.
 
