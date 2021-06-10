@@ -1,6 +1,6 @@
 ---
 title: Private Members in JavaScript, Türkçe
-date: "2021-06-09T13:10:55.284Z"
+date: "2021-06-10T22:50:55.284Z"
 description: Douglas Crockford'un Private Members in JavaScript adlı yazısının Türkçe çevirisi.
 ---
 
