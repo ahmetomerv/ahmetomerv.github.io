@@ -105,8 +105,8 @@ void function() {
   <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre></div>
 <p><code class="language-text">service</code> metodu ayrıcalıklı bir metottur. <code class="language-text">myContainer.service()</code> metodu çağrıldığı ilk üç seferde <code class="language-text">&#39;abc&#39;</code> dönecektir. Ondan sonra ise <code class="language-text">null</code> dönecek. <code class="language-text">service</code> metodu, özel <code class="language-text">secret</code> değişkenine erişen özel <code class="language-text">dec</code> metodunu çağırır. <code class="language-text">service</code> metodu diğer nesne ve metodlara açıktır, ancak özel üyelere direkt erişime izin vermez.</p>
-<h3>Kapanım (Closures)</h3>
-<p>Bu genel, özel ve ayrıcalıklı üye kalıplarını uygulamak JavaScript’in <em>kapanım (closures)</em> özelliği sayesinde mümkündür. Bunun anlamı, bir iç fonksiyonun, dış fonksiyon bir değer geri döndükten sonra bile, dış fonksiyonunu değişkenlerine ve parametrelerine her zaman erişimi olmasıdır. Dilin son derece güçlü bir özelliğidir bu. Bu, <a href="https://www.howjavascriptworks.com/">How JavaScript Works</a> kitabında açıklanmıştır.</p>
+<h3>Kapanımlar (Closures)</h3>
+<p>Bu genel, özel ve ayrıcalıklı üye kalıplarını uygulamak JavaScript’in <em>kapanımlar (closures)</em> özelliği sayesinde mümkündür. Bunun anlamı, bir iç fonksiyonun, dış fonksiyon bir değer geri döndükten sonra bile, dış fonksiyonunu değişkenlerine ve parametrelerine her zaman erişimi olmasıdır. Dilin son derece güçlü bir özelliğidir bu. Bu, <a href="https://www.howjavascriptworks.com/">How JavaScript Works</a> kitabında açıklanmıştır.</p>
 <p>Özel ve ayrıcalıklı üyeler sadece bir nesne başlatıldığında oluşturulabilir. Genel üyeler ise herhangi bir zamanda eklenebilir.</p>
 <h3>Kalıplar</h3>
 <h5>Genel</h5>
