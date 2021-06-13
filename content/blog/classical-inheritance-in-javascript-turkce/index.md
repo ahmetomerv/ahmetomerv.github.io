@@ -101,7 +101,7 @@ Bu yalnızca istenen metodları sınıfımıza ekler.
 
 ### Parazit Kalıtım (Parasitic Inheritance)
 
-`ZParenizor` sınıfını yazabileceğimiz başka bir yol daha var. `Parenizor` sınıfından kalıt almak yerine, `Parenizor` kurucusunu (constructor) çağıran ve sonucu kendisininki gibi aktaran bir kurucu yazıyoruz. Ve kurucu genel metodlar eklemek yerine, [ayrıcalıklı metodlar](http://www.crockford.com/javascript/private.html) ekler.
+`ZParenizor` sınıfını yazabileceğimiz başka bir yol daha var. `Parenizor` sınıfından kalıt almak yerine, `Parenizor` yapıcısını (constructor) çağıran ve sonucu kendisininki gibi aktaran bir yapıcı yazıyoruz. Ve yapıcı, genel metodlar eklemek yerine, [ayrıcalıklı metodlar](http://www.crockford.com/javascript/private.html) ekler.
 
 
 ```javascript
@@ -117,7 +117,7 @@ function ZParenizor2(value) {
 }
 ```
 
-Klasik kalıtımda [*is-a*](https://en.wikipedia.org/wiki/Is-a) ilişkisi var, ve parazit kalıtımda ise *[was-a-but-now's-a](#was-a-but-nows-a)* ilişkisi var. Nesnenin yapımında kurucunun daha büyük bir rolü vardır. `super` metodunun karşılığı olan `uber` metodunun ayrıcalıklı metodlar için hala erişilebilir olduğunu görebilirsiniz.
+Klasik kalıtımda [*is-a*](https://en.wikipedia.org/wiki/Is-a) ilişkisi var, ve parazit kalıtımda ise *[was-a-but-now's-a](#was-a-but-nows-a)* ilişkisi var. Nesnenin yapımında yapıcının daha büyük bir rolü vardır. `super` metodunun karşılığı olan `uber` metodunun ayrıcalıklı metodlar için hala erişilebilir olduğunu görebilirsiniz.
 
 ### Sınıf Çoğaltması (Class Augmentation)
 
@@ -205,18 +205,18 @@ Function.method('swiss', function (parent) {
 });
 ```
 
-`Swiss` metodu `arguments` dizisini döngüler. Her bir `name` için `parent` sınıfının `prototype` nesnesinden yeni sınıfın `prototype` nesnesine bir öğe kopyalar.
+`Swiss` metodu `arguments` dizisini döngüler. Her bir `name` için `parent` sınıfının `prototype` nesnesinden yeni sınıfın `prototype` nesnesine bir üye kopyalar.
 
 ### Sonuç
 
 JavaScript klasik bir dil gibi kullanılabilir, ancak aynı zamanda oldukça benzersiz bir ifade düzeyine sahiptir. Klasik Kalıtıma, Swiss Kalıtıma, Parazit Kalıtıma, Sınıf ve Nesne Çoğaltmasına baktık. Bu büyük yeniden kod kullanım kalıpları seti, Java'dan daha basit ve küçük olarak görülen bir dilden geliyor.
 
-Klasik nesneler serttir. Sert bir nesneye yeni bir öğe eklemenin tek yolu yeni bir sınıf oluşturmaktır. JavaScript'te nesneler yumuşaktır. Basit bir atama ile yumuşak bir nesneye yeni bir öğe eklenebilir. 
+Klasik nesneler serttir. Sert bir nesneye yeni bir üye eklemenin tek yolu yeni bir sınıf oluşturmaktır. JavaScript'te nesneler yumuşaktır. Basit bir atama ile yumuşak bir nesneye yeni bir üye eklenebilir. 
 
 JavaScript'teki nesneler çok esnek olduğundan, sınıf hiyerarşileri hakkında farklı düşünmek isteyeceksiniz. Derin hiyerarşiler uygun değildir. Yüzeysel hiyerarşiler ise etkili ve anlamlıdır.
 
 ##### <a name="was-a-but-nows-a"></a>was-a-but-now's-a
-Yazar parazit kalıtım için *was-a-but-now's-a* örneğini klasik kalıtımın *is-a* örneğinden yola çıkarak bir kelime oyunu yapmıştır. Özet olarak *is-a*, A sınıfının B sınıfından kalıt (inherit) alarak bir alt sınıfı olması, ve dolayısıyla B sınıfının A sınıfınının "supperclass"'ı olması olarak açıklanabilir. *was-a-but-now's-a* ise, A sınıfının B sınıfından kalıt (inherit) almak yerine, B sınıfının kurucusunu çağırarak sonucu A sınıfının bir metodunun sonucu gibi aktarılması olarak açıklanabilir.
+Yazar parazit kalıtım için *was-a-but-now's-a* örneğini klasik kalıtımın *is-a* örneğinden yola çıkarak bir kelime oyunu yapmıştır. Özet olarak *is-a*, A sınıfının B sınıfından kalıt (inherit) alarak bir alt sınıfı olması, ve dolayısıyla B sınıfının A sınıfınının "supperclass"'ı olması olarak açıklanabilir. *was-a-but-now's-a* ise, A sınıfının B sınıfından kalıt (inherit) almak yerine, B sınıfının yapıcısını çağırarak sonucu A sınıfının bir metodunun sonucu gibi aktarılması olarak açıklanabilir.
 
 ---
 

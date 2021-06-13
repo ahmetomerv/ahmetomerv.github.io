@@ -166,4 +166,6 @@ function Constructor(...) {
 }
 ```
 
+---
+
 Bu, [Douglas Crockford](http://www.crockford.com)'un [Private Members in JavaScript](http://www.crockford.com/javascript/private.html) adlı orijinal yazısının çevirisidir.

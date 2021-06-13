@@ -20,7 +20,7 @@ f.prototype
 ```
 nesnesinden kalıtlanan yeni bir nesne oluşturulabilir.
 
-Bu yanıltmayla, klasik (classically) dilleri bilen programcılara JavaScript'in daha tanıdık hale getirilmesi amaçlanıyordu, ancak Java programcılarının JavaScript hakkında sahip olduğu çok olumsuz görüşten de görebileceğimiz gibi, bu başarılamadı. JavaScript'in kurucu (constructor) kalıbı klasik tayfaya hitap etmedi. Ayrıca JavaScript'in gerçek prototip doğasını da gizlemiş oldu. Sonuç olarak, dili etkili bir şekilde kullanmayı bilen çok az programcı var.
+Bu yanıltmayla, klasik (classically) dilleri bilen programcılara JavaScript'in daha tanıdık hale getirilmesi amaçlanıyordu, ancak Java programcılarının JavaScript hakkında sahip olduğu çok olumsuz görüşten de görebileceğimiz gibi, bu başarılamadı. JavaScript'in yapıcı (constructor) kalıbı klasik tayfaya hitap etmedi. Ayrıca JavaScript'in gerçek prototip doğasını da gizlemiş oldu. Sonuç olarak, dili etkili bir şekilde kullanmayı bilen çok az programcı var.
 
 Neyse ki, gerçek prototip kalıtımı (inheritance) uygulayan bir operatör oluşturmak kolaydır. Bu, araç setimde standart bir özelliktir ve sizinki için de şiddetle tavsiye ederim.
 
@@ -32,7 +32,7 @@ function object(o) {
 }
 ```
 
-Yukarıdaki `object` fonksiyonu, JavaScript'in kurucu kalıbı (constructor pattern) sorununu çözerek gerçek prototip kalıtımı elde eder. Eski bir nesneyi parametre olarak alır ve eski nesneden kalıt alan (inherit) boş bir yeni nesne döndürür. Yeni oluşturduğumuz nesneden bir öğeye erişmeye çalışırsak, ve o öğe yeni nesnede yok ise, eski nesne onu sağlayacaktır. Nesneler, nesnelerden kalıt alır. Bundan daha nesne yönelimli ne olabilir?
+Yukarıdaki `object` fonksiyonu, JavaScript'in yapıcı kalıbı (constructor pattern) sorununu çözerek gerçek prototip kalıtımı elde eder. Eski bir nesneyi parametre olarak alır ve eski nesneden kalıt alan (inherit) boş bir yeni nesne döndürür. Yeni oluşturduğumuz nesneden bir üyeye erişmeye çalışırsak, ve o üye yeni nesnede yok ise, eski nesne onu sağlayacaktır. Nesneler, nesnelerden kalıt alır. Bundan daha nesne yönelimli ne olabilir?
 
 Böylece sınıflar oluşturmak yerine prototip nesneler oluşturursunuz ve ardından yeni örnekler oluşturmak için `object` fonksiyonunu kullanırsınız. JavaScript'te nesneler değiştirilebilirdir (mutable), bu nedenle yeni alanlar ve metodlar ekleyerek yeni örnekleri çoğaltabiliriz. Bunlar daha sonra daha yeni nesneler için bile prototip görevi görebilir. Bir sürü benzer nesne oluşturmak için sınıflara ihtiyacımız yok.
 
