@@ -344,6 +344,10 @@ a:focus {
   width: 100%;
 }
 
+.blog-post-rumils-outward-spiral-algorithm-on-javascript-canvas p img {
+  width: 45%;
+}
+
 .gatsby-resp-image-wrapper {
   margin: 2em 0;
 }

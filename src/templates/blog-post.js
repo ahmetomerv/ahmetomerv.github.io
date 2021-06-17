@@ -17,7 +17,7 @@ const BlogPostTemplate = ({ data, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <article
-        className="blog-post"
+        className={`blog-post blog-post-${removeSlash(location.pathname)}`}
         itemScope
         itemType="http://schema.org/Article"
       >
@@ -105,3 +105,11 @@ export const pageQuery = graphql`
     }
   }
 `
+
+const removeSlash = (string) => {
+  if (string) {
+    return string.replace(/\//g, '');
+  }
+
+  return string;
+}
