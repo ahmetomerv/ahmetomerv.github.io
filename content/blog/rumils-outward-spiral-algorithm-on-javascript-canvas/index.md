@@ -266,7 +266,7 @@ Here's a `800x800` canvas example, only by changing the `width` and `height` con
 
 ![ROSA 800x800 example](./rosa-example-800x800.gif "ROSA 800x800 example")
 
-This example, by using `cellIndexCounter`, renders each cell's index with the order it was drawn. Apparently there's a bug with the first index, I'm look into it I guess..
+This example, by using `cellIndexCounter`, renders each cell's index with the order it was drawn. Apparently there's a bug with the first index, I'll look into it I guess..
 
 ![ROSA 800x800 counters example](./rosa-example-800x800-counters.gif "ROSA 800x800 counters example")
 
