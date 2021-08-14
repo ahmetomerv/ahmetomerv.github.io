@@ -37,7 +37,7 @@ const createHiDPICanvas = (width, height, ratio) => {
   canvasElement.style.background = '#e6e6e6';
   canvasElement.getContext('2d').setTransform(ratio, 0, 0, ratio, 0, 0);
 
-	return canvasElement;
+  return canvasElement;
 }
 ```
 
