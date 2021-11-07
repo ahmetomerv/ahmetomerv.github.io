@@ -6,14 +6,14 @@ description:
 
 How would you measure a developer's performance? Definitely not with story points for sure. For anyone who's been programming for a few years, it would be fairly easy for them to come to the conclusion that the story points they collect after finishing each task do not reflect their performance and productivity. I mean, there are worse methods than that. Like measuring with the lines of code a developer wrote or the number of commits they pushed. Like any other thing's that built on good wish and delusion, this also fails to meet it's original intent.
 
-For this method to work correctly and give fair results, we'd have to assume:
+For this method to work correctly and give fair results, we'd have to assume that:
 
 * Each task is worth *at least* some points
 * Each task will be developed, reviewed, tested, and released by the time the current evaluation period ends
 * Developers will not jump on relatively easy tasks to collect points
 * We definitely have a good way of knowing the actual worth of task X in points
 
-Many tasks will overlap sprints. Many tasks will not be resolved because of some blockers even though an effort has been made maybe to debug and analyze a problem. Not every task is worth "points".
+Many tasks will overlap sprints. Many tasks will not be resolved because of some blockers even though an effort has been made maybe to debug and analyze a problem. Not every task is worth "points". 
 
 I guess it isn't that difficult to see how this method doesn't take into account the nature of human and the way we develop software. Instead of giving a good and fair metric on the productivity of the developer, it makes way for even worse outcomes. Developers unhappy with the way they are evaluated. A team of developers evaluated with false metrics. A team of developers focusing on collecting points instead of taking on tasks that would improve code quality and critical (and difficult) business issues that would otherwise take longer to finish.
 
