@@ -4,9 +4,7 @@ date: "2021-11-13T01:25:03.284Z"
 description:
 ---
 
-This is the second time I've been trying to write something about me leaving Turkey. As if this is the most important event in the history of humankind. The first draft was in Turkish, and also couldn't decide on the writing's format. But there you go. Hopefully, this will be worth it.
-
-This writing has no any intent other than me getting things out of my chest and giving some unneeded information about myself. Perhaps my children in the future might read this so that'd be nice. Anyway, the "advices" I might be giving should be taken with a grain of salt. Don't care about it if you do otherwise. Everyone should take care of their own asses.
+This is the second time I've been trying to write something about me leaving Turkey. As if this is the most important event in the history of humankind. The first draft was in Turkish, and also couldn't decide on the writing's format. But there you go. Hopefully, this will be worth it. This writing has no any intent other than me getting things out of my chest and giving some unneeded information about myself. Perhaps my children in the future might read this so that'd be nice. Hello from 2021 :d
 
 #### Some backstory
 I'm a 24 years old mostly brown, with a bit above average height and below average weight, Turkish citizen with Kurdish origin. Formal education-wise I have nothing concrete to show. Finished high school with a semi-religious curriculum. Haven't learned any relevant skills or knowledge during this time. My 4-years attempt to get into a university has failed for various reasons. I'm not sure whether it was my loss of interest in studying in Turkey that have led me to pursue programming or that my interest in programming has derailed my effort and wish to study. Anyhow, it didn't happen. But always liked the idea of studying in a well-known university, being in an academic circle, and mostly focusing and problems that only a few hundreds of people might care about. Liked the idea of abstracting away from the outer world. But my high school performance proved I do not have the necessary talent and will for such a path. Always felt Maths is not for me. Maybe I would've liked it if I had a genuine interest but that train is long gone. Anyhow, knowingly or not, I do feel that I am channelizing my keenness to an academic world to what I do now as a profession.
@@ -60,4 +58,4 @@ You might ask any person who opposes the government, they'll tell you everything
 
 If things change, I will also change my opinion. But until then, I've made my decision. My future lays in Europe.
 
-\* This ending sounded like a serious statement, it isn't, but it kind of is.
+\* This ending sounded like a serious statement, it isn't, but it kind of is. Took me couple of days to edit and finish it. This has got to be worth it.
