@@ -413,6 +413,16 @@ a:focus {
   border-radius: 7%;
 }
 
+.blog-post a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.blog-post a:hover {
+  color: var(--color-primary-light);
+  text-decoration: underline;
+}
+
 .blog-post-nav ul {
   margin: var(--spacing-0);
 }
