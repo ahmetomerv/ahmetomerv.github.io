@@ -2,6 +2,7 @@
 title: JScript Memory Leaks, Türkçe
 date: "2021-06-02T21:44:55.284Z"
 description: Douglas Crockford'un JScript Memory Leaks adlı yazısının Türkçe çevirisi.
+isTranslation: true
 ---
 
 Bir sistem, bellek tahsisini (memory allocation) doğru bir şekilde yönetemediğinde bellek sızıntısı yaşanır. Bellek sızıntısı bir hatadır. Belirtiler düşük performans ve başarısızlık içerebilir.

@@ -2,6 +2,7 @@
 title: Classical Inheritance in JavaScript, Türkçe
 date: "2021-06-06T06:45:55.284Z"
 description: Douglas Crockford'un Classical Inheritance in JavaScript adlı yazısının Türkçe çevirisi.
+isTranslation: true
 ---
 
 And you think you're so clever and classless and free. — John Lennon

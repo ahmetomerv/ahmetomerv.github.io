@@ -2,6 +2,7 @@
 title: Prototypal Inheritance in JavaScript, Türkçe
 date: "2021-06-06T13:10:55.284Z"
 description: Douglas Crockford'un Prototypal Inheritance in JavaScript adlı yazısının Türkçe çevirisi.
+isTranslation: true
 ---
 
 Beş yıl önce [JavaScript'te Klasik Kalıtımı](http://www.crockford.com/javascript/inheritance.html)([İtalyanca](http://eineki.wordpress.com/2009/10/13/ereditarieta-classica-in-javascript/)) yazdım. JavaScript'in sınıfsız, prototip bir dil olduğunu ve klasik bir sistemi simüle etmek için yeterli ifade gücüne sahip olduğunu anlatıyordu. Programlama stilim o zamandan beri iyi bir programcının yapması gerektiği gibi gelişti. Prototipalizmi tamamen benimsemeyi öğrendim ve kendimi klasik modelin sınırlarından kurtardım.

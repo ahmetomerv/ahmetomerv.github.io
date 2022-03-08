@@ -27,8 +27,12 @@ const BlogIndex = ({ data, location }) => {
       <Bio />
       <ol style={{ listStyle: `none`, paddingLeft: 0 }}>
         { posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug;
+          if (post.frontmatter.isTranslation) {
+            return;
+          }
 
+          const title = post.frontmatter.title || post.fields.slug;
+          
           return (
             <li key={post.fields.slug}>
               <article
@@ -81,6 +85,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          isTranslation
         }
       }
     }

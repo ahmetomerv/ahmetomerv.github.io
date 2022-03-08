@@ -2,6 +2,7 @@
 title: Private Members in JavaScript, Türkçe
 date: "2021-06-10T22:50:55.284Z"
 description: Douglas Crockford'un Private Members in JavaScript adlı yazısının Türkçe çevirisi.
+isTranslation: true
 ---
 
 [JavaScript](https://www.crockford.com/javascript) dünyanın en yanlış anlaşılan programlama dilidir. Nesnelerin özel örnek (instance) değişkenlerine ve metodlarına sahip olamayacağı için *bilgi gizleme* özelliğinden yoksun olduğuna inanılıyor. Ama bu bir yanlış anlaşılmadır. JavaScript nesneleri özel üyelere (private member) sahip olabilir. Bu şekilde gösterebiliriz:
