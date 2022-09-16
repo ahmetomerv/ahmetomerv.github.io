@@ -4,7 +4,7 @@ date: "2021-06-18T13:10:55.284Z"
 description: A trivial JavaScript algorithm to draw cells in a "spirally outward" fashion.
 ---
 
-Well well well... Isn't that a fancy name? It is but I couldn't find a simpler one. Its just what it is. An algorithm that draws cells starting from the center of a rectangular canvas, going outward, spirally. And, Rumil is my younger cat's name. Here's a [picture](https://twitter.com/eswordert/status/1398564524228292608?s=20) of him. There's no really any connection between my cat and this piece of program, just wanted to name it after him.
+Isn't that a fancy name? It is but I couldn't find a simpler one. Its just what it is. An algorithm that draws cells starting from the center of a rectangular canvas, going outward, spirally. And, Rumil is my younger cat's name. Here's a [picture](https://twitter.com/eswordert/status/1398564524228292608?s=20) of him. There's no really any connection between my cat and this piece of program, just wanted to name it after him.
 
 Probably there are algorithms implemented that does this or something similar to it. When I was working on my small side project [Spoticulum](https://github.com/ahmetomerv/spoticulum), I needed to find a way to map a bunch of images on a canvas, but starting from the center, and going outward. So I spent a good amount of time tinkering with loops but to only end in failure. I looked for something that does this but for some reason I couldn't find one, and believe me, my googling skills aren't even bad. So I went ahead and implemented my own version.
 

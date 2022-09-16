@@ -9,12 +9,14 @@ const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
+  const ogImage = post.frontmatter.image?.id;
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        ogImage={ogImage}
       />
       <article
         className={`blog-post blog-post-${removeSlash(location.pathname)}`}
@@ -85,6 +87,9 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        image { 
+          id
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

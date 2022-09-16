@@ -54,6 +54,10 @@ const Bio = () => {
           <div>
             {author?.summary || null}
             <br/>
+            <Link className="post-page-nav-item bio-link" to="/translations">
+              Translations
+            </Link>
+            <span> / </span>
             <a className="bio-link" target="_blank" rel="noreferrer" href={`${social?.twitter || ``}`}>
               Twitter
             </a>
@@ -61,10 +65,6 @@ const Bio = () => {
             <a className="bio-link" target="_blank" rel="noreferrer" href={`${social?.github || ``}`}>
               GitHub
             </a>
-            <span> / </span>
-            <Link className="post-page-nav-item bio-link" to="/translations">
-              Translations
-            </Link>
             <span> / </span>
             <a className="bio-link" target="_blank" rel="noreferrer" href={`${social?.dribbble || ``}`}>
               Dribbble
