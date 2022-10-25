@@ -1,4 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Ahmet Ömer]]></title><description><![CDATA[Ahmet Ömer]]></description><link>https://ahmetomer.net</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 12 Sep 2022 19:34:26 GMT</lastBuildDate><item><title><![CDATA[Micro Frontends - Cam Jackson]]></title><description><![CDATA[Cam Jackson‘ın Micro Frontends adlı makalesinin Türkçe çevirisidir. İyi bir frontend geliştirmesi yapmak zordur. Frontend geliştirmesini…]]></description><link>https://ahmetomer.net/micro-frontends-cam-jackson-turkce/</link><guid isPermaLink="false">https://ahmetomer.net/micro-frontends-cam-jackson-turkce/</guid><pubDate>Fri, 09 Sep 2022 15:23:33 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://camjackson.net/&quot;&gt;Cam Jackson&lt;/a&gt;‘ın &lt;a href=&quot;https://martinfowler.com/articles/micro-frontends.html&quot;&gt;Micro Frontends&lt;/a&gt; adlı makalesinin Türkçe çevirisidir.&lt;/em&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Ahmet Ömer]]></title><description><![CDATA[Ahmet Ömer]]></description><link>https://ahmetomer.net</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 25 Oct 2022 23:27:04 GMT</lastBuildDate><item><title><![CDATA[Eine reise nach Bratislava]]></title><description><![CDATA[Das erste Sache, was mich erstaunt hat in Bratislava, war das Wandbild im Hauptbahnhof.]]></description><link>https://ahmetomer.net/bratislava/</link><guid isPermaLink="false">https://ahmetomer.net/bratislava/</guid><pubDate>Wed, 26 Oct 2022 01:50:55 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b9eaa1992df07a74919a532f21d26659/d2602/bratislava-mural.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAEEAgP/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABXSRS0GA//8QAGxAAAgIDAQAAAAAAAAAAAAAAAAIBEgMREyL/2gAIAQEAAQUCiWPRti7265BejR//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAaEAACAgMAAAAAAAAAAAAAAAAAEQEQAkHh/9oACAEBAAY/AtV0UTTeJ//EABsQAAIDAQEBAAAAAAAAAAAAAAERACExUWGR/9oACAEBAAE/ITttyJGFCzIIOY7hRg0j5ABCzyf/2gAMAwEAAgADAAAAEKPP/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQMBAT8Qqv/EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAgEBPxAGxv/EAB0QAQEAAgIDAQAAAAAAAAAAAAERAEEhsVFhcaH/2gAIAQEAAT8QgHO0Gn7ixBj7SYNBOBqoygsl6x1vBAg6XvEyD4TXjP/Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Bratislava&quot;
+        title=&quot;Bratislava&quot;
+        src=&quot;/static/b9eaa1992df07a74919a532f21d26659/828fb/bratislava-mural.jpg&quot;
+        srcset=&quot;/static/b9eaa1992df07a74919a532f21d26659/ff44c/bratislava-mural.jpg 158w,
+/static/b9eaa1992df07a74919a532f21d26659/a6688/bratislava-mural.jpg 315w,
+/static/b9eaa1992df07a74919a532f21d26659/828fb/bratislava-mural.jpg 630w,
+/static/b9eaa1992df07a74919a532f21d26659/0ede0/bratislava-mural.jpg 945w,
+/static/b9eaa1992df07a74919a532f21d26659/3ac88/bratislava-mural.jpg 1260w,
+/static/b9eaa1992df07a74919a532f21d26659/d2602/bratislava-mural.jpg 4032w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Das erste Sache, was mich erstaunt hat in Bratislava, war das Wandbild im Hauptbahnhof.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Micro Frontends - Cam Jackson]]></title><description><![CDATA[Cam Jackson‘ın Micro Frontends adlı makalesinin Türkçe çevirisidir. İyi bir frontend geliştirmesi yapmak zordur. Frontend geliştirmesini…]]></description><link>https://ahmetomer.net/micro-frontends-cam-jackson-turkce/</link><guid isPermaLink="false">https://ahmetomer.net/micro-frontends-cam-jackson-turkce/</guid><pubDate>Fri, 09 Sep 2022 15:23:33 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://camjackson.net/&quot;&gt;Cam Jackson&lt;/a&gt;‘ın &lt;a href=&quot;https://martinfowler.com/articles/micro-frontends.html&quot;&gt;Micro Frontends&lt;/a&gt; adlı makalesinin Türkçe çevirisidir.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;İyi bir frontend geliştirmesi yapmak zordur. Frontend geliştirmesini birçok ekibin büyük ve karmaşık bir ürün üzerinde aynı anda çalışabilmesi için ölçeklendirmek daha da zordur. Bu yazıda, frontend monolitlerini daha küçük, daha yönetilebilir parçalara ayırmaya yönelik son günlerdeki yeni bir trendi ve bu mimarinin frontend kodu üzerinde çalışan ekiplerin etkinlik ve verimliliğini nasıl artırdığını açıklayacağız. Bununla beraber çeşitli faydalar ve maliyetler hakkında konuşacağımız gibi, mevcut implementasyon seçeneklerini ele alacağız, ve bu tekniği gösteren tam bir uygulama örneğinin derinliklerine dalacağız.&lt;/p&gt;
 &lt;p&gt;Son yıllarda &lt;a href=&quot;https://martinfowler.com/articles/microservices.html&quot;&gt;mikroservislerin&lt;/a&gt; popülaritesi patladı ve birçok organizasyon büyük ve monolitik backend projelerinin sınırlamalarından kaçınmak için bu mimari stili kullanıyor. Server-side yazılımı yapmanın bu stili hakkında çok şey yazılmış olsa da, birçok şirket monolitik frontend kod tabanlarıyla boğuşmaya devam ediyor.&lt;/p&gt;
 &lt;p&gt;Belki de progressive veya responsive bir web uygulaması yapmak istiyorsunuz, ancak bu özellikleri mevcut koda entegre etmeye başlamak için kolay bir yer bulamıyorsunuz. Belki de yeni JavaScript dil özelliklerini kullanmaya başlamak istiyorsunuz (ya da JavaScript’e derlenen sayısızca dillerden biri), ancak mevcut yapım sürecinize (build process) gerekli yapım araçlarını (build tools) oturtamıyorsunuz. Ya da sadece birden fazla ekibin aynı anda tek bir ürün üzerinde çalışabilmesi için geliştirmenizi ölçeklendirmek istiyorsunuz ancak mevcut monolitteki bağlaşım (coupling) ve karmaşıklık, herkesin birbirinin ayağına bastığı anlamına geliyor. Bunların tümü, müşterilerinize yüksek kaliteli deneyimleri verimli bir şekilde sunma kabiliyetinizi olumsuz yönde etkileyebilecek gerçek sorunlardır.&lt;/p&gt;
