@@ -11,7 +11,7 @@ import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 import favicon from '../../static/favicon.ico';
 
-const SEO = ({ description, lang, meta, title, ogImage }) => {
+const SEO = (data) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -30,15 +30,16 @@ const SEO = ({ description, lang, meta, title, ogImage }) => {
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = data.description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  const previewImg = 'https://ahmetomer.net' + data.preview?.src
 
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang: data.lang,
       }}
-      title={title}
+      title={data.title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
@@ -47,7 +48,7 @@ const SEO = ({ description, lang, meta, title, ogImage }) => {
         },
         {
           property: `og:title`,
-          content: title,
+          content: data.title,
         },
         {
           property: `og:description`,
@@ -55,15 +56,11 @@ const SEO = ({ description, lang, meta, title, ogImage }) => {
         },
         {
           property: `og:image`,
-          content: ogImage,
+          content: previewImg,
         },
         {
           property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
+          content: `article`,
         },
         {
           name: `twitter:creator`,
@@ -71,13 +68,25 @@ const SEO = ({ description, lang, meta, title, ogImage }) => {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: data.title,
+        },
+        {
+          name: `twitter:card`,
+          content: `summary_large_image`,
+        },
+        {
+          name: `twitter:domain`,
+          content: 'ahmetomer.net',
+        },
+        {
+          name: `twitter:image`,
+          content: previewImg,
         },
         {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+      ].concat(data.meta)}
     >
       <link rel="icon" href={favicon} />
     </Helmet>

@@ -351,10 +351,6 @@ a:focus {
   width: 100%;
 }
 
-.blog-post-rumils-outward-spiral-algorithm-on-javascript-canvas p img {
-  width: 45%;
-}
-
 .gatsby-resp-image-wrapper {
   margin: 2em 0;
 }
@@ -491,4 +487,9 @@ pre[class*="language-"] {
   .iframe-container iframe {
     width: 100%;
   }
+}
+
+/* post specific styles */
+.blog-post-rumils-outward-spiral-algorithm-on-javascript-canvas p img {
+  width: 45%;
 }
