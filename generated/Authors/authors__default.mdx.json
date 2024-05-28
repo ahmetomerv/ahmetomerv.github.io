@@ -1,0 +1,33 @@
+{
+  "name": "Ahmet Ömer",
+  "avatar": "/static/images/avatar.png",
+  "occupation": "Dev & maker",
+  "company": "x",
+  "email": "ahmetomerv@gmail.com",
+  "twitter": "https://x.com/ahmetomerv",
+  "linkedin": "https://www.linkedin.com",
+  "github": "https://github.com/ahmetomerv",
+  "body": {
+    "raw": "\nTails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.\n\nHe leads the clean energy group which develops 3D air pollution-climate models, writes differential equation solvers, and manufactures titanium plated air ballons. In his free time he bakes raspberry pi.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.\n",
+    "code": "var Component=(()=>{var p=Object.create;var n=Object.defineProperty;var d=Object.getOwnPropertyDescriptor;var h=Object.getOwnPropertyNames;var f=Object.getPrototypeOf,g=Object.prototype.hasOwnProperty;var x=(e,t)=>()=>(t||e((t={exports:{}}).exports,t),t.exports),v=(e,t)=>{for(var i in t)n(e,i,{get:t[i],enumerable:!0})},o=(e,t,i,r)=>{if(t&&typeof t==\"object\"||typeof t==\"function\")for(let s of h(t))!g.call(e,s)&&s!==i&&n(e,s,{get:()=>t[s],enumerable:!(r=d(t,s))||r.enumerable});return e};var w=(e,t,i)=>(i=e!=null?p(f(e)):{},o(t||!e||!e.__esModule?n(i,\"default\",{value:e,enumerable:!0}):i,e)),b=e=>o(n({},\"__esModule\",{value:!0}),e);var c=x((y,m)=>{m.exports=_jsx_runtime});var j={};v(j,{default:()=>u,frontmatter:()=>_});var a=w(c()),_={name:\"Ahmet \\xD6mer\",avatar:\"/static/images/avatar.png\",occupation:\"Dev & maker\",company:\"x\",email:\"ahmetomerv@gmail.com\",twitter:\"https://x.com/ahmetomerv\",linkedin:\"https://www.linkedin.com\",github:\"https://github.com/ahmetomerv\"};function l(e){let t={p:\"p\",...e.components};return(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(t.p,{children:\"Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.\"}),(0,a.jsx)(t.p,{children:\"He leads the clean energy group which develops 3D air pollution-climate models, writes differential equation solvers, and manufactures titanium plated air ballons. In his free time he bakes raspberry pi.\"}),(0,a.jsx)(t.p,{children:\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.\"})]})}function u(e={}){let{wrapper:t}=e.components||{};return t?(0,a.jsx)(t,{...e,children:(0,a.jsx)(l,{...e})}):l(e)}return b(j);})();\n;return Component;"
+  },
+  "_id": "authors/default.mdx",
+  "_raw": {
+    "sourceFilePath": "authors/default.mdx",
+    "sourceFileName": "default.mdx",
+    "sourceFileDir": "authors",
+    "contentType": "mdx",
+    "flattenedPath": "authors/default"
+  },
+  "type": "Authors",
+  "readingTime": {
+    "text": "1 min read",
+    "minutes": 0.45,
+    "time": 27000,
+    "words": 90
+  },
+  "slug": "default",
+  "path": "authors/default",
+  "filePath": "authors/default.mdx",
+  "toc": []
+}
