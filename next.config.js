@@ -61,11 +61,15 @@ module.exports = () => {
   const plugins = [withContentlayer, withBundleAnalyzer]
   return plugins.reduce((acc, next) => next(acc), {
     reactStrictMode: true,
+    output: 'export',
+    basePath: '/ahmetomerv.github.io',
+    assetPrefix: '/ahmetomerv.github.io/',
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
     eslint: {
       dirs: ['app', 'components', 'layouts', 'scripts'],
     },
     images: {
+      unoptimized: true,
       remotePatterns: [
         {
           protocol: 'https',
