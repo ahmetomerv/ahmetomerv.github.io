@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Ahmet Ömer&#39;s Blog</title>
+      <link>https://tailwind-nextjs-starter-blog.vercel.app/blog</link>
+      <description></description>
+      <language>en-us</language>
+      <managingEditor>ahmetomerv@gmail.com (Ahmet Ömer)</managingEditor>
+      <webMaster>ahmetomerv@gmail.com (Ahmet Ömer)</webMaster>
+      <lastBuildDate>Wed, 29 May 2024 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://tailwind-nextjs-starter-blog.vercel.app/tags/next-js/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/blog/indie-makers-scene</guid>
+    <title>The Indie-maker Scene</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/blog/indie-makers-scene</link>
+    
+    <pubDate>Wed, 29 May 2024 00:00:00 GMT</pubDate>
+    <author>ahmetomerv@gmail.com (Ahmet Ömer)</author>
+    <category>next-js</category><category>tailwind</category><category>guide</category><category>feature</category>
+  </item>
+
+    </channel>
+  </rss>

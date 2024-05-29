@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://tailwind-nextjs-starter-blog.vercel.app/</loc>
+<lastmod>2024-05-29</lastmod>
+</url>
+<url>
+<loc>https://tailwind-nextjs-starter-blog.vercel.app/blog</loc>
+<lastmod>2024-05-29</lastmod>
+</url>
+<url>
+<loc>https://tailwind-nextjs-starter-blog.vercel.app/projects</loc>
+<lastmod>2024-05-29</lastmod>
+</url>
+<url>
+<loc>https://tailwind-nextjs-starter-blog.vercel.app/tags</loc>
+<lastmod>2024-05-29</lastmod>
+</url>
+<url>
+<loc>https://tailwind-nextjs-starter-blog.vercel.app/blog/indie-makers-scene</loc>
+<lastmod>2024-05-29T00:00:00.000Z</lastmod>
+</url>
+</urlset>
