@@ -10,12 +10,12 @@ const Header = () => {
     <header className="flex justify-between py-10">
       <div>
         <Link href="/" aria-label={siteMetadata.headerTitle}>
-          <div className="flex items-center justify-between">
+          <div className="flex justify-between">
             <div className="mr-3">
               <img src={siteMetadata.siteLogo} />
             </div>
             {typeof siteMetadata.headerTitle === 'string' ? (
-              <div className="hidden h-6 text-2xl font-semibold sm:block">
+              <div className="hidden h-6 text-2xl font-semibold tracking-tight sm:block">
                 {siteMetadata.headerTitle}
               </div>
             ) : (

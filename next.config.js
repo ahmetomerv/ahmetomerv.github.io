@@ -7,9 +7,9 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app analytics.umami.is;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app https://*.googletagmanager.com ;
   style-src 'self' 'unsafe-inline';
-  img-src * blob: data:;
+  img-src * blob: data: https://*.google-analytics.com https://*.googletagmanager.com;
   media-src *.s3.amazonaws.com;
   connect-src *;
   font-src 'self';
@@ -62,8 +62,8 @@ module.exports = () => {
   return plugins.reduce((acc, next) => next(acc), {
     reactStrictMode: true,
     output: 'export',
-    basePath: '/ahmetomerv.github.io',
-    assetPrefix: '/ahmetomerv.github.io/',
+    basePath: process.env.NODE_ENV === 'production' ? '/.' : '',
+    assetPrefix: process.env.NODE_ENV === 'production' ? '/' : '',
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
     eslint: {
       dirs: ['app', 'components', 'layouts', 'scripts'],

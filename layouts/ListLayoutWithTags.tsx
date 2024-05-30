@@ -128,14 +128,17 @@ export default function ListLayoutWithTags({
                     <article className="flex flex-col space-y-2 xl:space-y-0">
                       <dl>
                         <dt className="sr-only">Published on</dt>
-                        <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                        <dd className="text-base leading-6 text-gray-500 dark:text-gray-400">
                           <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                         </dd>
                       </dl>
                       <div className="space-y-3">
                         <div>
-                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                            <Link href={`/${path}`} className="text-gray-900 dark:text-gray-100">
+                          <h2 className="text-xl font-bold leading-8 tracking-tight">
+                            <Link
+                              href={`/${path}`}
+                              className="text-primary-600 hover:text-primary-600 hover:underline dark:text-gray-100 dark:hover:text-primary-400"
+                            >
                               {title}
                             </Link>
                           </h2>

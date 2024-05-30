@@ -9,7 +9,8 @@
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
     "lint": "next lint --fix --dir pages --dir app --dir components --dir lib --dir layouts --dir scripts",
-    "prepare": "husky"
+    "prepare": "husky",
+    "deploy": "npm run build && touch ./out/.nojekyll && gh-pages -d out --nojekyll --cname ahmetomer.net"
   },
   "dependencies": {
     "@headlessui/react": "1.7.19",
