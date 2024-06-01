@@ -49,3 +49,7 @@ input:-webkit-autofill:focus {
   display: inline-block;
   vertical-align: middle;
 }
+
+.post-content p {
+  line-height: 1.5rem !important;
+}
